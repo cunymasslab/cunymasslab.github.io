@@ -21,7 +21,7 @@ layout: default
 {% if site.data.people.faculty %}
 ### {{site.data.people.faculty.desc}}
 {% for m in site.data.people.faculty.member %}
-- [{{m.name}}](m.url)
+- [{{m.name}}]({{m.url}})
 {% endfor %}
 {% endif %}
 
