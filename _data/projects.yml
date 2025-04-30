@@ -1,0 +1,55 @@
+- title: "Software Defect Prediction"
+  desc:  >-
+    Recent years have experienced sustained focus in research on software
+    defect prediction (SDP) that aims to predict the likelihood of software
+    defects.  The primary objective is to investigate Just-in-Time Software
+    Defect Prediction (JIT-SDP), a variant of SDP focusing on predicting
+    whether each incremental software change is defective. The increased
+    interest and widely spread practice of continuous deployment highlights the
+    importance of this research direction.
+  pubs:  "sdp"
+
+- title: "Software Vulnerability Identification"
+  desc:  >-
+    The primary objective is to automatically identify risk of software
+    vulnerabilities and the types of software vulnerabilities.
+  pubs: "svp"
+
+- title: "Internet Censorship Detection"
+  desc:  >-
+    The primary objective is to develop systems that can automatically 
+    identify possibility of network-based Internet censorship.
+  pubs: "censorship"
+
+- title: "Networked Sensing and Applications"
+  desc:  >-
+    This is to design networked sensor systems and applications, such as
+    for agriculture and environment protection.
+  pubs: "sensing"
+
+- title: "Computing Education Research in Software Security"
+  desc: >-
+    The object is to improve computing education in software security,
+    software engineering, programming, and a few related areas.
+  pubs: "secedu"
+
+- title: "Hierarchical Usage Context for Software Exceptions"
+  image: "/assets/images/faultctx.png"
+  desc:  "The primary objective is to provide usage contexts for software faults manifested as software exceptions. The modelling tools are unsupervised probabilistic graphical models. The datasets of interest are the combination of interaction traces and software crash reports. The output of the models includes a tree or a hierarchy of usage contexts and the probabilistic association of software exceptions to the tree of contexts, which contributes to a debugging methodology called “debugging in the large”, a postmortem analysis of large amount of usage data to recognize patterns of bugs."
+  pubs:  "faults"
+
+- title: "Information Retrieval for Software Code and Documentation"
+  image: "/assets/images/sotags.png"
+  desc:  "The growing crow-sourced online software development documentation and the advancement in Web searches have changed how we learn to develop software. How do we preserve this valuable software documentation? How do we integrate the documentation with our day-to-day software development process, tools, and ecosystem? How do we use the knowledge in the documentation to build better software, system and networks? The primary objective is to retrieve knowledge from the crowd-sourced informational software documentation and to use the knowledge to help improve software development tools and ecosystems."
+  pubs:  "irscd"
+
+- title: "Interaction-Aware Recommendation Systems for Software Developers"
+  image: "/assets/images/idetrace.png"
+  desc:  "The primary objective is integrate developer activity modeling into recommendation systems for software developers. Software development is a complex cognitive task. We can reduce software developers’ cognitive load by providing effective tools. These tools should be capable of recognizing developers’ activities and thereby make recommendations, such as, best IDE commands or plugins to choose from and situated learning of best practices. "
+  pubs:  "iarecsys"
+
+- title: "Accountable and Secure Systems"
+  image: "/assets/images/flownet.png"
+  desc:  "Preventative countermeasures and accountability are two complementary approaches to address computer security. Preventative countermeasures have been the primary approach in practice and in research. Real-world experiences from dealing with security indicate that accountability is not only complement to preventative countermeasures, but also necessary, in particular, when online privacy becomes a growing concern to individuals and societies at the advent of sophisticated cross-site referencing tools and algorithms. The primary object is thus to build accountable systems and networks to address real-word computer security. "
+  pubs:  "accountability"
+

@@ -1,0 +1,21 @@
+# Where things are 
+# destination         : _cunymasslab.github.io
+
+# Plugins
+plugins             : ['jekyll/scholar','jekyll-seo-tag','jekyll-feed']
+
+theme: minima
+
+# Serving
+detach              : false
+port                : 34090
+host                : localhost
+
+# build
+keep_files:
+    - .git/
+
+scholar             :
+    style: apa
+    bibliography_template: bib
+    bibliography_list_tag: "ul"

@@ -1,0 +1,42 @@
+title: People
+faculty:
+  desc: Faculty
+  member:
+    - name: Hui Chen
+      desc: Professor
+      image: assets/images/people/HuiChenWebSm.png
+      width: 150px
+      height: 200px
+      url: https://huichen-cs.github.io/
+phd:
+  desc: Ph.D. Students
+  member:
+    - name: Cheng Ning
+    - name: Kevin J. Lewis
+    - name: Yunhua Zhao
+      image: assets/images/people/YunhuaZhaoWebSm.png
+      width: 200px
+      height: 200px
+master:
+  desc: Master Students
+  member:
+    - name: Jack Choinski
+    - name: Ureka Chambugong
+    - name: Daniel Romanowski
+    - name: Thomas Raczkowski
+    - name: Ariel Zablozki
+undergraduate:
+  desc: Undergraduate Students
+  member:
+    - name: John Doros
+    - name: Wesley Liang
+alumni:
+  undergraduate:
+    desc: Undergraduate Students
+    member:
+      - name: Ledio Terolli
+        desc: Undergraduate Student
+        image: assets/images/people/LedioTerolliWebSm.png
+        width: 150px
+        height: 200px
+
