@@ -4,7 +4,8 @@
 # Plugins
 plugins             : ['jekyll/scholar','jekyll-seo-tag','jekyll-feed']
 
-theme: minima
+# theme: minima
+theme: jekyll-theme-basically-basic
 
 # Serving
 detach              : false

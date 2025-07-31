@@ -21,16 +21,24 @@ master:
   desc: Master Students
   member:
     - name: Jack Choinski
-    - name: Ureka Chambugong
-    - name: Daniel Romanowski
-    - name: Thomas Raczkowski
-    - name: Ariel Zablozki
+      #- name: Ureka Chambugong
+      #- name: Daniel Romanowski
+      #- name: Thomas Raczkowski
 undergraduate:
   desc: Undergraduate Students
   member:
     - name: John Doros
-    - name: Wesley Liang
+    - name: David Lam
+    - name: Mansoor Abid
+    - name: Faizan Khan
+    - name: Sagor Sutra Dhor
 alumni:
+  master:
+    desc: Master Students
+    member:
+      - name: Shawn Duncan
+      - name: Ariel Zablozki
+
   undergraduate:
     desc: Undergraduate Students
     member:
@@ -39,4 +47,20 @@ alumni:
         image: assets/images/people/LedioTerolliWebSm.png
         width: 150px
         height: 200px
+      - name: Bram Wolfe
+        desc: Undergraduate Student
+        class: 5001
+        contribution: Internet Censorship Detection
+      - name: Jordan Angus
+        desc: Undergraduate Student
+        class: 5001, 5002
+        contribution: Defect Prediction
+      - name: Jeffrey Zhang
+        desc: Undergraduate Student
+        class: 4900
+        contribution: CS Knowledge Mapping
+      - name: Wesley Liang 
+        desc: Undergraduate Student (4900)
+        class: 4900
+        contribution: CS Knowledge Mapping
 
