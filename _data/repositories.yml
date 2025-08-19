@@ -1,0 +1,10 @@
+# github_users:
+#  - huichen-cs
+#  - cunymasslab
+
+repo_description_lines_max: 2
+
+github_repos:
+  - RealVulnerabilityEdu/webvulmap
+  - RealVulnerabilityEdu/GhIssuesFromSarif
+  - RealVulnerabilityEdu/GhIssuesFromSarifAction

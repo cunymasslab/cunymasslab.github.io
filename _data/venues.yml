@@ -1,0 +1,17 @@
+"AJP":
+  url: https://aapt.scitation.org/journal/ajp
+  color: "#00369f"
+
+"FIE":
+  url: https://fie-conference.org/
+  color: "#009f36"
+
+"JSS":
+  url: https://www.sciencedirect.com/journal/journal-of-systems-and-software
+  color: "#00369f"
+
+"PhysRev":
+  url: https://journals.aps.org/
+
+"Vision":
+  color: "#009f36"

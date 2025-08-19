@@ -1,0 +1,277 @@
+---
+---
+
+@string{aps = {American Physical Society,}}
+
+@article{dil2025,
+	title = {Towards higher quality software vulnerability data using LLM-based patch filtering},
+	journal = {Journal of Systems and Software},
+	pages = {112581},
+	year = {2025},
+	issn = {0164-1212},
+	doi = {10.1016/j.jss.2025.112581},
+	url = {https://www.sciencedirect.com/science/article/pii/S016412122500250X},
+	author = {Charlie Dil and Hui Chen and Kostadin Damevski},
+	keywords = {Vulnerability patch quality, Automatic vulnerability prediction, Large language models},
+	abstract = {High-quality vulnerability patch data is essential for understanding vulnerabilities in software systems. Accurate patch data sheds light on the nature of vulnerabilities, their origins, and effective remediation strategies. However, current data collection efforts prioritize rapid release over quality, leading to patches that are incomplete or contain extraneous changes. In addition to supporting vulnerability analysis, high-quality patch data improves automatic vulnerability prediction models, which require reliable inputs to predict issues in new or existing code. In this paper, we explore using large language models (LLMs) to filter vulnerability data by identifying and removing low-quality instances. Trained on large textual corpora including source code, LLMs offer new opportunities to improve data accuracy. Our goal is to leverage LLMs for reasoning-based assessments of whether a code hunk fixes a described vulnerability. We evaluate several prompting strategies and find that Generated Knowledge Prompting, where the model first explains a hunk’s effect, then assesses whether it fixes the bug, is most effective across three LLMs. Applying this filtering to the BigVul dataset, we show a 7%–9% improvement in prediction precision for three popular vulnerability prediction models. Recall declines slightly, 2%–8%, across models, likely reflecting the impact of reduced dataset size.},
+	preprint = {preprint/llmcleanjss.pdf},
+	note = {In press},
+  selected = {true},
+	abbr = {JSS},
+}
+
+@article{uq2024,
+    title={Improving Data Curation of Software Vulnerability Patches through Uncertainty Quantification},
+    author={Hui Chen and Yunhua Zhao and Kostadin Damevski},
+    year={2024},
+    journal      = {CoRR},
+    volume       = {abs/2411.11659},
+    url          = {https://arxiv.org/abs/2411.11659},
+    doi          = {10.48550/arXiv.2411.11659},
+    eprinttype    = {arXiv},
+    eprint       = {2411.11659},
+}
+
+@article{duncan2022detecting,
+	title = {Detecting network-based internet censorship via latent feature representation learning},
+	journal = {Computers \& Security},
+	volume = {128},
+	number = {103138},
+	pages = {103138:1-103138:13},
+	numpages = {13},
+	year = {2023},
+	issn = {0167-4048},
+	doi = {https://doi.org/10.1016/j.cose.2023.103138},
+	url = {https://www.sciencedirect.com/science/article/pii/S0167404823000482},
+	author = {Shawn P. Duncan and Hui Chen},
+	keywords = {Internet censorship, Internet censorship detection, Network-based internet censorship detection, Deep neural network, Feature representation learning},
+	abstract = {Internet censorship is a phenomenon of societal importance and attracts investigation from multiple disciplines. Several research groups, such as Censored Planet, have deployed large scale Internet measurement platforms to collect network reachability data. However, existing studies generally rely on manually designed rules (i.e., using censorship fingerprints) to detect network-based Internet censorship from the data. While this rule-based approach yields a high true positive detection rate, it suffers from several challenges: it requires human expertise, is laborious, and cannot detect any censorship not captured by the rules. Seeking to overcome these challenges, we design and evaluate a classification model based on latent feature representation learning and an image-based classification model to detect network-based Internet censorship. To infer latent feature representations from network reachability data, we propose a sequence-to-sequence autoencoder to capture the structure and the order of data elements in the data. To estimate the probability of censorship events from the inferred latent features, we rely on a densely connected multi-layer neural network model. Our image-based classification model encodes a network reachability data record as a gray-scale image and classifies the image as censored or not using a dense convolutional neural network. We compare and evaluate both approaches using data sets from Censored Planet via a hold-out evaluation. Both classification models are capable of detecting network-based Internet censorship as we were able to identify instances of censorship not detected by the known fingerprints. Latent feature representations likely encode more nuances in the data since the latent feature learning approach discovers a greater quantity, and a more diverse set, of new censorship instances.}
+}
+
+@Article{s23052365,
+    AUTHOR = {Chen, Hui and Wang, Ju},
+    TITLE = {Active Learning for Efficient Soil Monitoring in Large Terrain with Heterogeneous Sensor Network},
+    JOURNAL = {Sensors},
+    VOLUME = {23},
+    YEAR = {2023},
+    NUMBER = {5},
+    pages = {2365:1-2365:25},
+    numpages={25},
+    ARTICLE-NUMBER = {2365},
+    URL = {https://www.mdpi.com/1424-8220/23/5/2365},
+    ISSN = {1424-8220},
+    ABSTRACT = {Soils are a complex ecosystem that provides critical services, such as growing food, supplying antibiotics, filtering wastes, and maintaining biodiversity; hence monitoring soil health and domestication is required for sustainable human development. Low-cost and high-resolution soil monitoring systems are challenging to design and build. Compounded by the sheer size of the monitoring area of interest and the variety of biological, chemical, and physical parameters to monitor, naive approaches to adding or scheduling more sensors will suffer from cost and scalability problems. We investigate a multi-robot sensing system integrated with an active learning-based predictive modeling technique. Taking advantage of advances in machine learning, the predictive model allows us to interpolate and predict soil attributes of interest from the data collected by sensors and soil surveys. The system provides high-resolution prediction when the modeling output is calibrated with static land-based sensors. The active learning modeling technique allows our system to be adaptive in data collection strategy for time-varying data fields, utilizing aerial and land robots for new sensor data. We evaluated our approach using numerical experiments with a soil dataset focusing on heavy metal concentration in a flooded area. The experimental results demonstrate that our algorithms can reduce sensor deployment costs via optimized sensing locations and paths while providing high-fidelity data prediction and interpolation. More importantly, the results verify the adapting behavior of the system to the spatial and temporal variations of soil conditions.},
+    DOI = {10.3390/s23052365}
+}
+
+
+@article{zhao2022systematic,
+	author = {Zhao, Yunhua and Damevski, Kostadin and Chen, Hui},
+	title = {A Systematic Survey of Just-in-Time Software Defect Prediction},
+	month = {February},
+	year = {2023},
+	issue_date = {October 2023},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	volume = {55},
+	number = {10},
+	pages = {201:1-201:35},
+	issn = {0360-0300},
+	url = {https://dl.acm.org/doi/10.1145/3567550},
+	doi = {10.1145/3567550},
+	abstract = {Recent years have experienced sustained focus in research on software defect prediction that aims to predict the likelihood of software defects. Moreover, with the increased interest in continuous deployment, a variant of software defect prediction called Just-in-Time Software Defect Prediction (JIT-SDP) focuses on predicting whether each incremental software change is defective. JIT-SDP is unique in that it consists of two interconnected data streams, one consisting of the arrivals of software changes stemming from design and implementation, and the other the (defective or clean) labels of software changes resulting from quality assurance processes.We present a systematic survey of 67 JIT-SDP studies with the objective to help researchers advance the state of the art in JIT-SDP and to help practitioners become familiar with recent progress. We summarize best practices in each phase of the JIT-SDP workflow, carry out a meta-analysis of prior studies, and suggest future research directions. Our meta-analysis of JIT-SDP studies indicates, among other findings, that the predictive performance correlates with change defect ratio, suggesting that JIT-SDP is most performant in projects that experience relatively high defect ratios. Future research directions for JIT-SDP include situating each technique into its application domain, reliability-aware JIT-SDP, and user-centered JIT-SDP.},
+	journal = {ACM Computing Surveys},
+	articleno = {201},
+	numpages = {35},
+	keywords = {software change metrics, release software defect prediction, machine learning, searching-based algorithms, Software defect prediction, just-in-time software defect prediction, change defect density, change-level software defect prediction}
+}
+
+@article{zhao2022systematicsuppl,
+	author = {Zhao, Yunhua and Damevski, Kostadin and Chen, Hui},
+	title = {Supplementary Material for:
+		A Systematic Survey of Just-in-time Software Defect
+			Prediction},
+	year = {2023},
+	issue_date = {October 2023},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	volume = {55},
+	number = {10},
+	pages = {201:1-201:25},
+	issn = {0360-0300},
+	url = {https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3567550&file=3567550-supp.pdf},
+	note = {Online only: \url{https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3567550&file=3567550-supp.pdf}},
+	journal = {ACM Computing Surveys},
+	month = {February},
+	numpages = {25},
+}
+
+
+
+@Article{chen2019modeling,
+	author="Chen, Hui
+		and Damevski, Kostadin
+		and Shepherd, David
+		and Kraft, Nicholas A.",
+	title="Modeling hierarchical usage context for software exceptions based on interaction data",
+	journal="Automated Software Engineering",
+	year="2019",
+	month="December",
+	day="01",
+	volume="26",
+	number="4",
+	pages="733--756",
+	abstract="Traces of user interactions with a software system, captured in production, are commonly used as an input source for user experience testing. In this paper, we present an alternative use, introducing a novel approach of modeling user interaction traces enriched with another type of data gathered in production---software fault reports consisting of software exceptions and stack traces. The model described in this paper aims to improve developers' comprehension of the circumstances surrounding a specific software exception and can highlight specific user behaviors that lead to a high frequency of software faults. Modeling the combination of interaction traces and software crash reports to form an interpretable and useful model is challenging due to the complexity and variance in the combined data source. Therefore, we propose a probabilistic unsupervised learning approach, adapting the nested hierarchical Dirichlet process, which is a Bayesian non-parametric hierarchical topic model originally applied to natural language data. This model infers a tree of topics, each of whom describes a set of commonly co-occurring commands and exceptions. The topic tree can be interpreted hierarchically to aid in categorizing the numerous types of exceptions and interactions. We apply the proposed approach to large scale datasets collected from the ABB RobotStudio software application, and evaluate it both numerically and with a small survey of the RobotStudio developers.",
+	issn="1573-7535",
+	doi="10.1007/s10515-019-00265-3",
+	url="https://doi.org/10.1007/s10515-019-00265-3"
+}
+
+
+
+
+@article{CHEN2019283,
+title = "Modeling {Stack Overflow} tags and topics as a hierarchy of concepts",
+journal = "Journal of Systems and Software",
+volume = "156",
+pages = "283 - 299",
+month = "October",
+year = "2019",
+issn = "0164-1212",
+doi = "https://doi.org/10.1016/j.jss.2019.07.033",
+url = "http://www.sciencedirect.com/science/article/pii/S0164121219301499",
+author = "Hui Chen and John Coogle and Kostadin Damevski",
+keywords = "Concept hierarchy, Hierarchical topic model, Stack overflow, Tag synonym identification, Tag prediction, Entropy-based search evaluation",
+abstract = "Developers rely on online Q&A forums to look up technical solutions, to pose questions on implementation problems, and to enhance their community profile by contributing answers. Many popular developer communication platforms, such as the Stack Overflow Q&A forum, require threads of discussion to be tagged by their contributors for easier lookup in both asking and answering questions. In this paper, we propose to leverage Stack Overflow’s tags to create a hierarchical organization of concepts discussed on this platform. The resulting concept hierarchy couples tags with a model of their relevancy to prospective questions and answers. For this purpose, we configure and apply a supervised multi-label hierarchical topic model to Stack Overflow questions and demonstrate the quality of the model in several ways: by identifying tag synonyms, by tagging previously unseen Stack Overflow posts, and by exploring how the hierarchy could aid exploratory searches of the corpus. The results suggest that when traversing the inferred hierarchical concept model of Stack Overflow the questions become more specific as one explores down the hierarchy and more diverse as one jumps to different branches. The results also indicate that the model is an improvement over the baseline for the detection of tag synonyms and that the model could enhance existing ensemble methods for suggesting tags for new questions. The paper indicates that the concept hierarchy as a modeling imperative can create a useful representation of the Stack Overflow corpus. This hierarchy can be in turn integrated into development tools which rely on information retrieval and natural language processing, and thereby help developers more efficiently navigate crowd-sourced online documentation."
+}
+
+@ARTICLE{Xiao8813093,
+	author={Y. {Xiao} and L. {Zeng} and H. {Chen} and T. {Li}},
+	journal={IEEE Access},
+	title={Prototyping Flow-Net Logging for Accountability Management in Linux Operating Systems},
+	year={2019},
+	month={August},
+	volume={7},
+	number={},
+	pages={131172-131187},
+	keywords={Linux;Access control;Kernel;Internet of Things;Computer security;Computer security;accountability;logging;auditing;flow-net;IoT},
+	doi={10.1109/ACCESS.2019.2937637},
+	ISSN={},
+}
+
+@ARTICLE{damevski8024001,
+author={Kostadin Damevski and Hui Chen and David C. Shepherd and Nicholas A. Kraft and Lori Pollock},
+journal={IEEE Transactions on Software Engineering},
+title={Predicting Future Developer Behavior in the IDE Using Topic Models},
+year={2018},
+volume={44},
+number={11},
+pages={1100-1111},
+keywords={program debugging;recommender systems;software engineering;future developer behavior;early software command recommender systems;negative user reaction;unusually complex applications;command recommendations;recommendation generation;user experience;command recommenders;future task context;debug OR;future development commands;software development interaction data;predicting future IDE commands;empirically-interpretable observations;Natural languages;Data models;Analytical models;Predictive models;Visualization;Adaptation models;Data analysis;Command recommendation systems;IDE interaction data},
+doi={10.1109/TSE.2017.2748134},
+ISSN={0098-5589},
+month={Nov},}
+
+@article{FU2018167,
+    title = "{FNF}: Flow-net based fingerprinting and its applications",
+    journal = "Computers \& Security",
+    volume = "75",
+    pages = "167 - 181",
+    month = "June",
+    year = "2018",
+    issn = "0167-4048",
+    doi = "https://doi.org/10.1016/j.cose.2018.02.005",
+    url = "http://www.sciencedirect.com/science/article/pii/S0167404818300877",
+    author = "Bo Fu and Yang Xiao and Hui Chen",
+    keywords = "Flow-net, Logging, Fingerprint, Intrusion detection, Computer networks, Computer systems"
+}
+
+
+@inproceedings{fie2025,
+  author={Lewis, Kevin and Chen, Hui},
+  title={{WIP}: How Effective Are LLM-Implemented Autograders for Programming Assignments Compared to Human Graders?},
+  booktitle={Proceedings of the 2025 IEEE Frontiers in Education Conference (FIE)}, 
+  volume={},
+  number={},
+	pages={LC:1--LC:5},
+	year={2025},
+	organization={IEEE},
+  keywords={Grades, Grading Systems, Automated Grading, Student Assessment, Computing Skills},
+  preprint = {preprint/fie2025autograder.pdf},
+	abstract = {This research-to-practice WIP paper describes the development and
+		evaluation of a generative Large Language Model (gLLM)-based autograder for
+			computer programming assignments. Manual grading is becoming increasingly
+			unsustainable due to growing student enrollment and the demand for
+			timely, high-quality feedback. To address these challenges, this study
+			explores the use of automated grading tools to reduce instructors’
+			workload and improve scalability. The proposed autograder takes a
+			“reverse-engineering” approach, i.e., it converts student code into
+			structured natural language summaries, which are then compared against
+			predefined grading rubrics. An evaluation is performed using an external
+			dataset (the Menagerie dataset), which contains real student submissions
+			graded by four human graders. The objective is to assess the alignment
+			between grades assigned by the autograder and those assigned by human
+			graders. Findings indicate that the autograder closely matches human
+			grading when letter grades are considered, though it performs less
+			accurately with fine-grained numerical scores.  While not yet a complete
+			substitute for human assessment, the autograder shows strong potential as
+			a scalable, efficient tool for supporting grading in programming
+			education.},
+  selected = {true},
+	note = {Accepted and to appear},
+  abbr = {FIE},
+}
+
+@inproceedings{fie2024,
+  author={Daniels, Denise and Lee, Joon Suk and Chen, Hui and Damevski, Kostadin},
+  title={Utilizing Real-World Software Vulnerabilities to Enhance Secure Programming Education}, 
+  booktitle={2024 IEEE Frontiers in Education Conference (FIE)}, 
+  volume={},
+  number={},
+	pages={DLCD:1--DLCD:8},
+	year={2024},
+	organization={IEEE},
+  keywords={Training;Surveys;Databases;Grounding;Source coding;Pressing;Software;Computer security;Programming profession;5.b.vii. Computer science;8.c. Computing skills;8.u. Student perception;12.d.iii. Mixed methods research},
+  preprint = {preprint/fie2024vul.pdf},
+	abstract = {This research paper describes a study of using real-world vulnerabilities to motivate computer science students to-
+			wards learning secure programming. Given the rise in cybersecurity incidents due to programming errors, there is a pressing need
+			to improve programmers’ secure programming skills. Despite
+			educators’ numerous efforts towards this goal, communicating
+			the importance of this training to students remains a challenge.
+			Grounding on the theory of intrinsic motivation, we propose
+			that exposing students to authentic, relatable vulnerabilities can
+			significantly enhance their learning orientation towards secure
+			programming. Our approach involves selecting vulnerabilities
+			from the National Vulnerability Database that are both relatable
+			to students and understandable without extensive external context. These vulnerabilities are transformed into comprehensive
+			course modules, each featuring a demonstrative video, source
+			code snippets of the vulnerability and its patch, and associated
+			developer communications about the vulnerability. We assess
+			the impact of one of our course modules on students’ learning
+			disposition through a study conducted in two universities in
+			an identical setting. The study results indicate that students
+			appreciate seeing real-world vulnerabilities in detail, especially
+			the video we recorded reproducing the vulnerability, and that
+			they gain in self-efficacy after completing the module.},
+  doi={10.1109/FIE61694.2024.10893584},
+  abbr = {FIE},
+}
+
+@inproceedings{Chen_2019_UAP_3304221_3319731,
+ author = {Chen, Hui and Ciborowska, Agnieszka and Damevski, Kostadin},
+ title = {Using Automated Prompts for Student Reflection on Computer Security Concepts},
+ booktitle = {Proceedings of the 2019 ACM Conference on Innovation and Technology in Computer Science Education},
+ series = {ITiCSE '19},
+ year = {2019},
+ isbn = {978-1-4503-6301-3},
+ location = {Aberdeen, Scotland Uk},
+ pages = {506--512},
+ numpages = {7},
+ url = {http://doi.acm.org/10.1145/3304221.3319731},
+ doi = {10.1145/3304221.3319731},
+ acmid = {3319731},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {automated reflection, reflection, reflection prompt},
+}
+
