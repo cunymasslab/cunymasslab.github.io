@@ -1,7 +1,7 @@
 ---
 layout: member-profiles
-permalink: /members/
-title: member
+permalink: /people/
+title: people
 description: members of the group
 nav: true
 nav_order: 8
