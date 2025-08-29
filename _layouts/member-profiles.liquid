@@ -1,0 +1,70 @@
+---
+layout: page
+---
+
+
+{% assign member_profiles = site.data.members.profiles %}
+
+{% assign alumni_begin = false %}
+
+
+<div class="post">
+  <article>
+    {% if member_profiles %}
+      {% for profile in member_profiles %}
+          {% if alumni_begin == false and profile.type == 'alumni' %}
+            {% assign alumni_begin = true %}
+              <div class="post-header">
+                <hr>
+                <hr>
+                <h1 class="post-title">alumni</h1>
+                <p class="post-description">alumni of the group</p>
+              </div>
+        {% endif %}
+        <hr>
+        <div class="profile float-{% if profile.align == 'right' %}right{% else %}left{% endif %}">
+          {% if profile.image %}
+            {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+            {% if profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+          {% endif %}
+          <div class="more-info">
+            <div class="member-contact-icons">
+              {% if profile.github_username %}
+                <a href="https://github.com/{{ profile.github_username }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              {% endif %}
+              {% if profile.linkedin_username %}
+                 <a href="https://www.linkedin.com/in/{{ profile.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              {% endif %}
+            </div>
+            {{ profile.name }}
+          </div>
+          <!--
+          {% if profile.more_info %}
+            <div class="more-info">{{ profile.more_info }}</div>
+          {% endif %}
+          -->
+        </div>
+
+        <div class="clearfix">
+          {% if profile.content %}
+            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
+            {{ profile_content | markdownify }}
+          {% else if profile.desc %}
+            {{ profile.desc | markdownify }}
+          {% else %}
+            {{ content }}
+          {% endif %}
+          {% if profile.more_info %}
+            <div class="more-info">{{ profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </article>
+</div>
