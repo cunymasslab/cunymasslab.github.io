@@ -57,6 +57,8 @@ nav_order: 7
 ### {{site.data.people.undergraduate.desc}}
 {% for m in site.data.people.undergraduate.member %}
 - {{m.name}}
+  ({%- if m.linkedin -%}[LinkedIn]({{m.linkedin}}) {% endif %}
+	 {% if m.github %}, [GitHub]({{m.github}}){% endif %})
 {% endfor %}
 {% endif %}
 
