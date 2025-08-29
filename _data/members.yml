@@ -1,0 +1,147 @@
+profiles:
+  - name: Hui Chen
+    type: faculty
+    key: chenhui
+    desc: >
+      Professor Hui Chen directs the Mass Lab. For more about this work, please visit his
+      <a href="https://huichen-cs.github.io" target="_blank">personal website</a>.
+    # image: people/HuiChenWebSm.png
+    image: people/dummy_man_small.png
+    url: https://huichen-cs.github.io/
+    more_info: >-
+      <p>1432 Ingersoll Hall</p>
+      <p>2900 Bedford Ave</p>
+      <p>Brooklyn, NY 11210</p>
+      
+  - name: Cheng Ning
+    type: phd
+    desc: >
+      Cheng Ning is a Ph.D. student of Compuer Science at CUNY Graduate Center.
+    image: people/dummy_man_small.png
+
+  - name: Kevin J. Lewis
+    type: phd
+    image: people/dummy_man_small.png
+    desc: >
+      Kevin Lewis is a Ph.D. student of Compuer Science at CUNY Graduate Center.
+
+  - name: Yunhua Zhao
+    type: phd
+    image: people/dummy_woman_small.png
+    desc: >
+      Yunhua Zhao is a Ph.D. student of Compuer Science at CUNY Graduate Center.
+    # image: assets/images/people/YunhuaZhaoWebSm.png
+
+  - name: Jack Choinski
+    type: master
+    image: people/dummy_man_small.png
+    desc: >
+      Jack is a Master student of Computer Science at CUNY Brooklyn College.
+  - name: John Doros
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      John is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: David Lam
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      David is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Mansoor Abid
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Mansoor is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Faizan Khan
+    type: undergraduate
+    image: people/dummy_man_small.png
+    linkedin: https://www.linkedin.com/in/faizan-khan234
+    linkedin_username: faizan-khan234
+    github: https://github.com/jellyfishing2346
+    github_username: jellyfishing2346
+    desc: >
+      Faizan is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Sagor Sutra Dhor
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Sagor is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Shawn Duncan
+    type: alumni
+    image: people/dummy_man_small.png
+    before: master
+    desc: >
+      Shawn was a Master student of Computer Science at CUNY Brooklyn College. He graduated
+      with a M.A. in Computer Science from Brooklyn College.
+
+  - name: Ariel Zablozki
+    type: alumni
+    before: master
+    image: people/dummy_man_small.png
+    desc: >
+      Ariel was a Master student of Computer Science at CUNY Brooklyn College. He graduated
+      with a M.A. in Computer Science from Brooklyn College.
+
+  - name: Ledio Terolli
+    desc: Undergraduate Student
+    image: assets/images/people/LedioTerolliWebSm.png
+    type: alumni
+    before: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Ledio was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
+      with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Bram Wolfe
+    desc: Undergraduate Student
+    class: 5001
+    contribution: Internet Censorship Detection
+    type: alumni
+    before: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Bram was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
+      with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Jordan Angus
+    desc: Undergraduate Student
+    class: 5001, 5002
+    contribution: Defect Prediction
+    type: alumni
+    before: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Jordan was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
+      with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Jeffrey Zhang
+    type: alumni
+    before: undergraduate
+    desc: Undergraduate Student
+    class: 4900
+    contribution: CS Knowledge Mapping
+    image: people/dummy_man_small.png
+    desc: >
+      Jeffrey was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
+      with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Wesley Liang 
+    type: alumni
+    before: undergraduate
+    desc: Undergraduate Student (4900)
+    class: 4900
+    contribution: CS Knowledge Mapping
+    image: people/dummy_man_small.png
+    desc: >
+      Wesley was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
+      with a B.S. in Computer Science from Brooklyn College.
+
+
+#- name: Ureka Chambugong
+#- name: Daniel Romanowski
+#- name: Thomas Raczkowski
