@@ -217,7 +217,9 @@ ul.task-list input[type="checkbox"] {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    // original 30% make it 10%
+    // width: 30%;
+    width: 15%;
 
     .address {
       p {
@@ -1417,3 +1419,8 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+.member-contact-icons {
+  font-size: 1.5rem;
+}
+
