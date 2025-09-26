@@ -2,9 +2,9 @@
 layout: page
 title: Software Vulnerability Prediction (SVP)
 id: svp
-# description: with background image
-# img: assets/img/12.jpg
-importance: 1
+# description: An thumbnail image for Software Vulnerability Prediction (SVP) research
+img: assets/img/vuldata-thumbnail.png
+importance: 10
 category: work
 related_publications: false
 ---

@@ -4,7 +4,7 @@ title: Just-In-Time Software Defect Prediction (JIT-SDP)
 id: jitsdp
 # description: with background image
 # img: assets/img/12.jpg
-importance: 1
+importance: 20
 category: work
 related_publications: false
 ---

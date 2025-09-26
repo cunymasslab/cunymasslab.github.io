@@ -2,6 +2,10 @@
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
 
+"CANDS":
+  url: https://www.sciencedirect.com/journal/computers-and-security
+  color: "#b11449"
+
 "FIE":
   url: https://fie-conference.org/
   color: "#009f36"
@@ -10,8 +14,9 @@
   url: https://www.sciencedirect.com/journal/journal-of-systems-and-software
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"TSE":
+  url: https://www.computer.org/csdl/journal/ts
+  color: "#78A330"
 
 "Vision":
   color: "#009f36"

@@ -4,7 +4,7 @@ title: "Networked Sensing and Applications"
 id: sensing
 # description: with background image
 # img: assets/img/12.jpg
-importance: 1
+importance: 50
 category: work
 related_publications: false
 ---

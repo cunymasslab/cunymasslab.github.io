@@ -4,7 +4,7 @@ title: Internet Censorship Detection
 id: censorship
 # description: with background image
 # img: assets/img/12.jpg
-importance: 1
+importance: 40
 category: work
 related_publications: false
 ---

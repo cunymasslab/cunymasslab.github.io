@@ -2,8 +2,8 @@
 layout: page
 title: "Information Retrieval for Software Code and Documentation"
 # description: with background image
-# img: assets/img/12.jpg
-importance: 1
+img: assets/img/ircode-thumbnail.png
+importance: 10
 category: work
 related_publications: false
 ---

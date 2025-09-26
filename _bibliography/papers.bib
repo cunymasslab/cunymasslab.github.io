@@ -3,6 +3,25 @@
 
 @string{aps = {American Physical Society,}}
 
+@ARTICLE{chen_uq_2025,
+	author={Hui Chen and Yunhua Zhao and Kostadin Damevski} ,
+	journal={IEEE Transactions on Software Engineering},
+	title={Improving Data Curation of Software Vulnerability Patches through Uncertainty Quantification},
+	year={2025},
+	volume={},
+	number={},
+	pages={CYD:1-CYD:15},
+	keywords={},
+	doi={10.1109/TSE.2025.3612278},
+	ISSN={0098-5589},
+	month={September},
+	url = {https://ieeexplore.ieee.org/document/11175468},
+  preprint = {https://arxiv.org/abs/2411.11659},
+	abbr = {TSE},
+	selected = {true},
+}
+
+
 @article{dil2025,
 	title = {Towards higher quality software vulnerability data using LLM-based patch filtering},
 	journal = {Journal of Systems and Software},
@@ -20,18 +39,6 @@
 	abbr = {JSS},
 }
 
-@article{uq2024,
-    title={Improving Data Curation of Software Vulnerability Patches through Uncertainty Quantification},
-    author={Hui Chen and Yunhua Zhao and Kostadin Damevski},
-    year={2024},
-    journal      = {CoRR},
-    volume       = {abs/2411.11659},
-    url          = {https://arxiv.org/abs/2411.11659},
-    doi          = {10.48550/arXiv.2411.11659},
-    eprinttype    = {arXiv},
-    eprint       = {2411.11659},
-}
-
 @article{duncan2022detecting,
 	title = {Detecting network-based internet censorship via latent feature representation learning},
 	journal = {Computers \& Security},
@@ -45,7 +52,8 @@
 	url = {https://www.sciencedirect.com/science/article/pii/S0167404823000482},
 	author = {Shawn P. Duncan and Hui Chen},
 	keywords = {Internet censorship, Internet censorship detection, Network-based internet censorship detection, Deep neural network, Feature representation learning},
-	abstract = {Internet censorship is a phenomenon of societal importance and attracts investigation from multiple disciplines. Several research groups, such as Censored Planet, have deployed large scale Internet measurement platforms to collect network reachability data. However, existing studies generally rely on manually designed rules (i.e., using censorship fingerprints) to detect network-based Internet censorship from the data. While this rule-based approach yields a high true positive detection rate, it suffers from several challenges: it requires human expertise, is laborious, and cannot detect any censorship not captured by the rules. Seeking to overcome these challenges, we design and evaluate a classification model based on latent feature representation learning and an image-based classification model to detect network-based Internet censorship. To infer latent feature representations from network reachability data, we propose a sequence-to-sequence autoencoder to capture the structure and the order of data elements in the data. To estimate the probability of censorship events from the inferred latent features, we rely on a densely connected multi-layer neural network model. Our image-based classification model encodes a network reachability data record as a gray-scale image and classifies the image as censored or not using a dense convolutional neural network. We compare and evaluate both approaches using data sets from Censored Planet via a hold-out evaluation. Both classification models are capable of detecting network-based Internet censorship as we were able to identify instances of censorship not detected by the known fingerprints. Latent feature representations likely encode more nuances in the data since the latent feature learning approach discovers a greater quantity, and a more diverse set, of new censorship instances.}
+	abstract = {Internet censorship is a phenomenon of societal importance and attracts investigation from multiple disciplines. Several research groups, such as Censored Planet, have deployed large scale Internet measurement platforms to collect network reachability data. However, existing studies generally rely on manually designed rules (i.e., using censorship fingerprints) to detect network-based Internet censorship from the data. While this rule-based approach yields a high true positive detection rate, it suffers from several challenges: it requires human expertise, is laborious, and cannot detect any censorship not captured by the rules. Seeking to overcome these challenges, we design and evaluate a classification model based on latent feature representation learning and an image-based classification model to detect network-based Internet censorship. To infer latent feature representations from network reachability data, we propose a sequence-to-sequence autoencoder to capture the structure and the order of data elements in the data. To estimate the probability of censorship events from the inferred latent features, we rely on a densely connected multi-layer neural network model. Our image-based classification model encodes a network reachability data record as a gray-scale image and classifies the image as censored or not using a dense convolutional neural network. We compare and evaluate both approaches using data sets from Censored Planet via a hold-out evaluation. Both classification models are capable of detecting network-based Internet censorship as we were able to identify instances of censorship not detected by the known fingerprints. Latent feature representations likely encode more nuances in the data since the latent feature learning approach discovers a greater quantity, and a more diverse set, of new censorship instances.},
+	abbr = {CANDS},
 }
 
 @Article{s23052365,
@@ -131,18 +139,19 @@
 
 
 @article{CHEN2019283,
-title = "Modeling {Stack Overflow} tags and topics as a hierarchy of concepts",
-journal = "Journal of Systems and Software",
-volume = "156",
-pages = "283 - 299",
-month = "October",
-year = "2019",
-issn = "0164-1212",
-doi = "https://doi.org/10.1016/j.jss.2019.07.033",
-url = "http://www.sciencedirect.com/science/article/pii/S0164121219301499",
-author = "Hui Chen and John Coogle and Kostadin Damevski",
-keywords = "Concept hierarchy, Hierarchical topic model, Stack overflow, Tag synonym identification, Tag prediction, Entropy-based search evaluation",
-abstract = "Developers rely on online Q&A forums to look up technical solutions, to pose questions on implementation problems, and to enhance their community profile by contributing answers. Many popular developer communication platforms, such as the Stack Overflow Q&A forum, require threads of discussion to be tagged by their contributors for easier lookup in both asking and answering questions. In this paper, we propose to leverage Stack Overflow’s tags to create a hierarchical organization of concepts discussed on this platform. The resulting concept hierarchy couples tags with a model of their relevancy to prospective questions and answers. For this purpose, we configure and apply a supervised multi-label hierarchical topic model to Stack Overflow questions and demonstrate the quality of the model in several ways: by identifying tag synonyms, by tagging previously unseen Stack Overflow posts, and by exploring how the hierarchy could aid exploratory searches of the corpus. The results suggest that when traversing the inferred hierarchical concept model of Stack Overflow the questions become more specific as one explores down the hierarchy and more diverse as one jumps to different branches. The results also indicate that the model is an improvement over the baseline for the detection of tag synonyms and that the model could enhance existing ensemble methods for suggesting tags for new questions. The paper indicates that the concept hierarchy as a modeling imperative can create a useful representation of the Stack Overflow corpus. This hierarchy can be in turn integrated into development tools which rely on information retrieval and natural language processing, and thereby help developers more efficiently navigate crowd-sourced online documentation."
+	title = "Modeling {Stack Overflow} tags and topics as a hierarchy of concepts",
+	journal = "Journal of Systems and Software",
+	volume = "156",
+	pages = "283 - 299",
+	month = "October",
+	year = "2019",
+	issn = "0164-1212",
+	doi = "https://doi.org/10.1016/j.jss.2019.07.033",
+	url = "http://www.sciencedirect.com/science/article/pii/S0164121219301499",
+	author = "Hui Chen and John Coogle and Kostadin Damevski",
+	keywords = "Concept hierarchy, Hierarchical topic model, Stack overflow, Tag synonym identification, Tag prediction, Entropy-based search evaluation",
+	abstract = "Developers rely on online Q&A forums to look up technical solutions, to pose questions on implementation problems, and to enhance their community profile by contributing answers. Many popular developer communication platforms, such as the Stack Overflow Q&A forum, require threads of discussion to be tagged by their contributors for easier lookup in both asking and answering questions. In this paper, we propose to leverage Stack Overflow’s tags to create a hierarchical organization of concepts discussed on this platform. The resulting concept hierarchy couples tags with a model of their relevancy to prospective questions and answers. For this purpose, we configure and apply a supervised multi-label hierarchical topic model to Stack Overflow questions and demonstrate the quality of the model in several ways: by identifying tag synonyms, by tagging previously unseen Stack Overflow posts, and by exploring how the hierarchy could aid exploratory searches of the corpus. The results suggest that when traversing the inferred hierarchical concept model of Stack Overflow the questions become more specific as one explores down the hierarchy and more diverse as one jumps to different branches. The results also indicate that the model is an improvement over the baseline for the detection of tag synonyms and that the model could enhance existing ensemble methods for suggesting tags for new questions. The paper indicates that the concept hierarchy as a modeling imperative can create a useful representation of the Stack Overflow corpus. This hierarchy can be in turn integrated into development tools which rely on information retrieval and natural language processing, and thereby help developers more efficiently navigate crowd-sourced online documentation.",
+	abbr = "JSS",
 }
 
 @ARTICLE{Xiao8813093,
@@ -160,17 +169,20 @@ abstract = "Developers rely on online Q&A forums to look up technical solutions,
 }
 
 @ARTICLE{damevski8024001,
-author={Kostadin Damevski and Hui Chen and David C. Shepherd and Nicholas A. Kraft and Lori Pollock},
-journal={IEEE Transactions on Software Engineering},
-title={Predicting Future Developer Behavior in the IDE Using Topic Models},
-year={2018},
-volume={44},
-number={11},
-pages={1100-1111},
-keywords={program debugging;recommender systems;software engineering;future developer behavior;early software command recommender systems;negative user reaction;unusually complex applications;command recommendations;recommendation generation;user experience;command recommenders;future task context;debug OR;future development commands;software development interaction data;predicting future IDE commands;empirically-interpretable observations;Natural languages;Data models;Analytical models;Predictive models;Visualization;Adaptation models;Data analysis;Command recommendation systems;IDE interaction data},
-doi={10.1109/TSE.2017.2748134},
-ISSN={0098-5589},
-month={Nov},}
+	author={Kostadin Damevski and Hui Chen and David C. Shepherd and Nicholas A. Kraft and Lori Pollock},
+	journal={IEEE Transactions on Software Engineering},
+	title={Predicting Future Developer Behavior in the IDE Using Topic Models},
+	year={2018},
+	volume={44},
+	number={11},
+	pages={1100-1111},
+	keywords={program debugging;recommender systems;software engineering;future developer behavior;early software command recommender systems;negative user reaction;unusually complex applications;command recommendations;recommendation generation;user experience;command recommenders;future task context;debug OR;future development commands;software development interaction data;predicting future IDE commands;empirically-interpretable observations;Natural languages;Data models;Analytical models;Predictive models;Visualization;Adaptation models;Data analysis;Command recommendation systems;IDE interaction data},
+	doi={10.1109/TSE.2017.2748134},
+	ISSN={0098-5589},
+	month={Nov},
+	url={https://ieeexplore.ieee.org/document/8024001},
+	abbr = {TSE},
+}
 
 @article{FU2018167,
     title = "{FNF}: Flow-net based fingerprinting and its applications",
@@ -183,7 +195,8 @@ month={Nov},}
     doi = "https://doi.org/10.1016/j.cose.2018.02.005",
     url = "http://www.sciencedirect.com/science/article/pii/S0167404818300877",
     author = "Bo Fu and Yang Xiao and Hui Chen",
-    keywords = "Flow-net, Logging, Fingerprint, Intrusion detection, Computer networks, Computer systems"
+    keywords = "Flow-net, Logging, Fingerprint, Intrusion detection, Computer networks, Computer systems",
+		abbr = "CANDS",
 }
 
 
