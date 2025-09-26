@@ -14,6 +14,10 @@
   url: https://www.sciencedirect.com/journal/journal-of-systems-and-software
   color: "#00369f"
 
+"CSUR":
+  url: https://dl.acm.org/journal/csur
+  color: "#0193cf"
+
 "TSE":
   url: https://www.computer.org/csdl/journal/ts
   color: "#78A330"
