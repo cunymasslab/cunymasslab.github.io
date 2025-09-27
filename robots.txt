@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://https://cunymasslab.github.io/sitemap.xml
+Sitemap: https://cunymasslab.github.io/sitemap.xml
