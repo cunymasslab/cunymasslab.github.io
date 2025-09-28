@@ -32,13 +32,15 @@ latest_posts:
 {% endfor %}
 
 {% if site.data.acknowledgment %}
-## Acknowledgment
-{% if site.data.acknowledgment.sponsors %}
-  {% assign sponsors = site.data.acknowledgment.sponsors %}
-The MASS Lab has been supported by
-    {% for s in sponsors %}
-- {{s}}
-		{% endfor %}
-  {% endif %}
-{% endif %}
 
+## Acknowledgment
+
+{% if site.data.acknowledgment.sponsors %}
+{% assign sponsors = site.data.acknowledgment.sponsors %}
+The MASS Lab has been supported by
+{% for s in sponsors %}
+
+- {{s}}
+  {% endfor %}
+  {% endif %}
+  {% endif %}

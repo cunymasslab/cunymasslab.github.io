@@ -20,11 +20,11 @@ earlier_all: notcuny_chenhui_cs_jrnl_plus_conf.bib
 {% bibliography %}
 
 {% if page.earlier_papers %}
-	<hr>
-	<hr>
-	<h2>earlier publications</h2>
-	<p class="post-description">earlier publications before lab formation</p>
-	<div class="publications">
-			{% bibliography --file {{page.earlier_all}} %}
-	</div>
+  <hr>
+  <hr>
+  <h2>earlier publications</h2>
+  <p class="post-description">earlier publications before lab formation</p>
+  <div class="publications">
+    {% bibliography --file {{page.earlier_all}} %}
+  </div>
 {% endif %}
