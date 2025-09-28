@@ -9,14 +9,12 @@ category: work
 related_publications: false
 ---
 
-
 {% assign parts = page.url | split: '/' %}
 {% assign pname = parts | last %}
 
 {% assign p = site.data.projects | find: 'id', pname %}
 
 {{p.desc}}
-
 
 ## Related Publications
 
