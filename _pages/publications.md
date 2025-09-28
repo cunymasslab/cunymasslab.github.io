@@ -6,7 +6,7 @@ description: Selected Publications
 nav: true
 nav_order: 2
 earlier_papers: true
-earlier_all: notcuny_chenhui_jrnl_plus_conf.bib
+earlier_all: notcuny_chenhui_cs_jrnl_plus_conf.bib
 ---
 
 <!-- _pages/publications.md -->
