@@ -216,7 +216,7 @@
         {% endif %}
       {% endif %}
       {% if entry.url %}
-          <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Publisher</a>
+        <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Publisher</a>
       {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
@@ -225,9 +225,9 @@
           <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {% endif %}
       {% else %}
-          {% if entry.preprint %}
-            <a href="{{ entry.preprint | prepend: site.preprintroot | relative_url }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
-          {% endif %}
+        {% if entry.preprint %}
+          <a href="{{ entry.preprint | prepend: site.preprintroot | relative_url }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
+        {% endif %}
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
