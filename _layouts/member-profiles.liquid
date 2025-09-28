@@ -2,24 +2,22 @@
 layout: page
 ---
 
-
 {% assign member_profiles = site.data.members.profiles %}
 
 {% assign alumni_begin = false %}
-
 
 <div class="post">
   <article>
     {% if member_profiles %}
       {% for profile in member_profiles %}
-          {% if alumni_begin == false and profile.type == 'alumni' %}
-            {% assign alumni_begin = true %}
-              <div class="post-header">
-                <hr>
-                <hr>
-                <h1 class="post-title">alumni</h1>
-                <p class="post-description">alumni of the group</p>
-              </div>
+        {% if alumni_begin == false and profile.type == 'alumni' %}
+          {% assign alumni_begin = true %}
+          <div class="post-header">
+            <hr>
+            <hr>
+            <h1 class="post-title">alumni</h1>
+            <p class="post-description">alumni of the group</p>
+          </div>
         {% endif %}
         <hr>
         <div class="profile float-{% if profile.align == 'right' %}right{% else %}left{% endif %}">
@@ -39,15 +37,15 @@ layout: page
                 <a href="https://github.com/{{ profile.github_username }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
               {% endif %}
               {% if profile.linkedin_username %}
-                 <a href="https://www.linkedin.com/in/{{ profile.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/{{ profile.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
               {% endif %}
             </div>
             {{ profile.name }}
           </div>
           <!--
-          {% if profile.more_info %}
-            <div class="more-info">{{ profile.more_info }}</div>
-          {% endif %}
+            {% if profile.more_info %}
+              <div class="more-info">{{ profile.more_info }}</div>
+            {% endif %}
           -->
         </div>
 
@@ -55,7 +53,7 @@ layout: page
           {% if profile.content %}
             {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
             {{ profile_content | markdownify }}
-          {% else if profile.desc %}
+          {% elsif profile.desc %}
             {{ profile.desc | markdownify }}
           {% else %}
             {{ content }}
