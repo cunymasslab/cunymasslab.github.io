@@ -226,7 +226,11 @@
         {% endif %}
       {% else %}
         {% if entry.preprint %}
-          <a href="{{ entry.preprint | prepend: site.preprintroot | relative_url }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
+          {% if entry.pdf contains '://' %}
+            <a href="{{ entry.preprint }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
+          {% else %}
+            <a href="{{ entry.preprint | prepend: site.preprintroot | relative_url }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
+          {% endif %}
         {% endif %}
       {% endif %}
       {% if entry.supp %}
