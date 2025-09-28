@@ -1,5 +1,8 @@
+# project specific
+.bundle
+.local
+# inherited from al-folio
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
