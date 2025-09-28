@@ -226,8 +226,8 @@
         {% endif %}
       {% else %}
         {% if entry.preprint %}
-          {% if entry.pdf contains '://' %}
-            <a href="{{ entry.preprint }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
+          {% if entry.preprint contains '://' %}
+            <a href="{{ entry.preprint }}" class="btn btn-sm z-depth-0" role="button">Preprint</a>
           {% else %}
             <a href="{{ entry.preprint | prepend: site.preprintroot | relative_url }}" class="btn btn-sm z-depth-0" role="button">Preprint PDF</a>
           {% endif %}
