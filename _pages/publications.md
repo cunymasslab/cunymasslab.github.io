@@ -20,6 +20,7 @@ earlier_all: notcuny_chenhui_cs_jrnl_plus_conf.bib
 {% bibliography %}
 
 {% if page.earlier_papers %}
+
   <hr>
   <hr>
   <h2>earlier publications</h2>
