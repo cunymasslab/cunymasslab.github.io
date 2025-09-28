@@ -12,7 +12,7 @@ profiles:
       <p>1432 Ingersoll Hall</p>
       <p>2900 Bedford Ave</p>
       <p>Brooklyn, NY 11210</p>
-      
+
   - name: Cheng Ning
     type: phd
     desc: >
@@ -88,8 +88,7 @@ profiles:
       with a M.A. in Computer Science from Brooklyn College.
 
   - name: Ledio Terolli
-    desc: Undergraduate Student
-    image: assets/images/people/LedioTerolliWebSm.png
+    # image: assets/images/people/LedioTerolliWebSm.png
     type: alumni
     before: undergraduate
     image: people/dummy_man_small.png
@@ -98,7 +97,6 @@ profiles:
       with a B.S. in Computer Science from Brooklyn College.
 
   - name: Bram Wolfe
-    desc: Undergraduate Student
     class: 5001
     contribution: Internet Censorship Detection
     type: alumni
@@ -109,7 +107,6 @@ profiles:
       with a B.S. in Computer Science from Brooklyn College.
 
   - name: Jordan Angus
-    desc: Undergraduate Student
     class: 5001, 5002
     contribution: Defect Prediction
     type: alumni
@@ -122,7 +119,6 @@ profiles:
   - name: Jeffrey Zhang
     type: alumni
     before: undergraduate
-    desc: Undergraduate Student
     class: 4900
     contribution: CS Knowledge Mapping
     image: people/dummy_man_small.png
@@ -130,17 +126,15 @@ profiles:
       Jeffrey was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
       with a B.S. in Computer Science from Brooklyn College.
 
-  - name: Wesley Liang 
+  - name: Wesley Liang
     type: alumni
     before: undergraduate
-    desc: Undergraduate Student (4900)
     class: 4900
     contribution: CS Knowledge Mapping
     image: people/dummy_man_small.png
     desc: >
       Wesley was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
       with a B.S. in Computer Science from Brooklyn College.
-
 
 #- name: Ureka Chambugong
 #- name: Daniel Romanowski
