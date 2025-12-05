@@ -7,7 +7,7 @@ profiles:
       <a href="https://huichen-cs.github.io" target="_blank">personal website</a>.
     # image: people/HuiChenWebSm.png
     # image relative to /assets/img
-    # image: people/dummy_man_small.png 
+    # image: people/dummy_man_small.png
     image: people/HuiChenWebSm.png
     url: https://huichen-cs.github.io/
     more_info: >-
