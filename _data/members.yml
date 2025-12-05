@@ -6,7 +6,9 @@ profiles:
       Professor Hui Chen directs the Mass Lab. For more about this work, please visit his
       <a href="https://huichen-cs.github.io" target="_blank">personal website</a>.
     # image: people/HuiChenWebSm.png
-    image: people/dummy_man_small.png
+    # image relative to /assets/img
+    # image: people/dummy_man_small.png 
+    image: people/HuiChenWebSm.png
     url: https://huichen-cs.github.io/
     more_info: >-
       <p>1432 Ingersoll Hall</p>
