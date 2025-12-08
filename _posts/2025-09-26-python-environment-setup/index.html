@@ -1,0 +1,270 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Setting Up Python Development Environment for Lab Research | CUNY MASS Lab </title> <meta name="author" content="CUNY MASS Lab"> <meta name="description" content="A comprehensive guide for newcomers to set up Python environments using Conda, pip, and uv for reproducible research"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link defer href="/assets/css/bootstrap-toc.min.css?6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet"> <link rel="shortcut icon" href="/assets/img/favicon.ico?122ff076f8267d4797770791341121ec"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://cunymasslab.github.io/_posts/2025-09-26-python-environment-setup/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">CUNY</span> MASS Lab </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top"></nav> </div> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">Setting Up Python Development Environment for Lab Research</h1> <p class="post-meta"> Created on September 26, 2025 by Vitaliy Tei and Josemar Ochoa </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2025   ·   <i class="fa-solid fa-hashtag fa-sm"></i> python conda pip uv tutorial environment   ·   <i class="fa-solid fa-tag fa-sm"></i> tutorials </p> </header> <article class="post-content"> <div id="markdown-content"> <p>Welcome to the CUNY MASS Lab! This tutorial will guide you through setting up a robust Python development environment for your research work. We’ll use <strong>Conda</strong> to manage system-level environments and explore two popular tools for managing Python dependencies: <strong>pip</strong> and <strong>uv</strong>.</p> <h2 id="why-environment-management-matters">Why Environment Management Matters</h2> <p>When working on research projects, especially in machine learning and data science, you’ll often need:</p> <ul> <li>Different Python versions for different projects</li> <li>Isolated package dependencies to avoid conflicts</li> <li>Reproducible environments that your collaborators can recreate</li> <li>Clean separation between projects</li> <li>Distinction between system-level and Python package isolation</li> </ul> <p><strong>System vs. Package Environments:</strong> It’s important to understand two layers of isolation. <strong>System environments</strong> manage the Python interpreter itself along with system-level libraries and dependencies (like CUDA drivers, compilers, and native binaries). <strong>Python package environments</strong> manage pure Python packages and their dependencies. Conda excels at creating system environments—for example, it can install CUDA libraries, different Python versions, and compiled packages like NumPy with optimized BLAS libraries. In contrast, pip and uv focus on Python package management within an existing Python installation. Conda actually provides both layers, while pip/uv only handle the package layer.</p> <p>This is where environment management tools become essential.</p> <hr> <h2 id="prerequisites">Prerequisites</h2> <p>Before we begin, ensure you have:</p> <ul> <li> <strong>Windows 10/11</strong> (for local development) or <strong>Linux</strong> (for cluster work)</li> <li> <strong>Git</strong> installed on your system</li> <li>Access to your lab’s computing cluster (if applicable)</li> </ul> <hr> <h2 id="part-1-setting-up-conda">Part 1: Setting Up Conda</h2> <p><a href="https://docs.conda.io/en/latest/" rel="external nofollow noopener" target="_blank">Conda</a> is an open-source package and environment management system that works across platforms. We’ll use <strong>Miniconda</strong>, a minimal installer for Conda.</p> <h3 id="installing-miniconda">Installing Miniconda</h3> <h4 id="on-windows">On Windows</h4> <ol> <li>Download Miniconda from the <a href="https://www.anaconda.com/docs/getting-started/miniconda/install" rel="external nofollow noopener" target="_blank">official website</a> </li> <li>Run the installer</li> <li> <strong>Important:</strong> Check “Add Miniconda to PATH” during installation (or use Anaconda Prompt)</li> <li>Open <strong>Anaconda Prompt</strong> (or Command Prompt if added to PATH)</li> <li>Verify installation:</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nt">--version</span>
+</code></pre></div></div> <h4 id="on-linux-cluster">On Linux (Cluster)</h4> <p>SSH into your cluster and run:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Download Miniconda installer</span>
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+<span class="c"># Run the installer</span>
+bash Miniconda3-latest-Linux-x86_64.sh
+
+<span class="c"># Follow the prompts, accept the license, and confirm the installation location</span>
+<span class="c"># When asked "Do you wish to update your shell profile to automatically initialize conda?" answer yes</span>
+
+<span class="c"># Reload your shell configuration</span>
+<span class="nb">source</span> ~/.bashrc
+
+<span class="c"># Verify installation</span>
+conda <span class="nt">--version</span>
+</code></pre></div></div> <h3 id="accepting-conda-terms-of-service-if-required">Accepting Conda Terms of Service (if required)</h3> <p>Recent versions of Conda may require accepting Terms of Service:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda tos accept <span class="nt">--override-channels</span> <span class="nt">--channel</span> https://repo.anaconda.com/pkgs/main
+conda tos accept <span class="nt">--override-channels</span> <span class="nt">--channel</span> https://repo.anaconda.com/pkgs/r
+conda tos accept <span class="nt">--override-channels</span> <span class="nt">--channel</span> https://repo.anaconda.com/pkgs/msys2
+</code></pre></div></div> <h3 id="creating-your-first-environment">Creating Your First Environment</h3> <p>Let’s create an environment called <code class="language-plaintext highlighter-rouge">research-env</code> with Python 3.10:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create environment with specific Python version</span>
+conda create <span class="nt">-n</span> research-env <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+
+<span class="c"># Activate the environment</span>
+conda activate research-env
+
+<span class="c"># Your prompt should now show (research-env)</span>
+</code></pre></div></div> <h3 id="installing-core-scientific-packages-with-conda">Installing Core Scientific Packages with Conda</h3> <p>Conda is excellent for installing complex scientific packages with C/C++ dependencies:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-y</span> numpy pandas scikit-learn matplotlib jupyter
+</code></pre></div></div> <h3 id="verifying-your-conda-environment">Verifying Your Conda Environment</h3> <p>Test that everything works:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-c</span> <span class="s2">"import numpy, pandas, sklearn, matplotlib; print('Environment setup successful ✅')"</span>
+</code></pre></div></div> <h3 id="useful-conda-commands">Useful Conda Commands</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List all environments</span>
+conda <span class="nb">env </span>list
+
+<span class="c"># Deactivate current environment</span>
+conda deactivate
+
+<span class="c"># Remove an environment</span>
+conda <span class="nb">env </span>remove <span class="nt">-n</span> research-env
+
+<span class="c"># Update conda itself</span>
+conda update conda
+
+<span class="c"># List packages in current environment</span>
+conda list
+</code></pre></div></div> <h3 id="exporting-and-sharing-environments">Exporting and Sharing Environments</h3> <p>To make your environment reproducible:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export environment to a file</span>
+conda <span class="nb">env export</span> <span class="o">&gt;</span> environment.yml
+
+<span class="c"># Share environment.yml with collaborators</span>
+<span class="c"># They can recreate it with:</span>
+<span class="c"># conda env create -f environment.yml</span>
+</code></pre></div></div> <p><strong>Example <code class="language-plaintext highlighter-rouge">environment.yml</code>:</strong></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">research-env</span>
+<span class="na">channels</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">defaults</span>
+<span class="na">dependencies</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">python=3.10</span>
+  <span class="pi">-</span> <span class="s">numpy</span>
+  <span class="pi">-</span> <span class="s">pandas</span>
+  <span class="pi">-</span> <span class="s">scikit-learn</span>
+  <span class="pi">-</span> <span class="s">matplotlib</span>
+  <span class="pi">-</span> <span class="s">jupyter</span>
+  <span class="pi">-</span> <span class="s">pip</span>
+  <span class="pi">-</span> <span class="na">pip</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">some-pip-only-package</span>
+</code></pre></div></div> <hr> <h2 id="part-2-managing-dependencies-with-pip">Part 2: Managing Dependencies with pip</h2> <p><a href="https://pip.pypa.io/en/stable/" rel="external nofollow noopener" target="_blank">pip</a> is the standard package installer for Python. It’s bundled with Python and comes pre-installed in Conda environments.</p> <h3 id="why-use-pip-with-conda">Why Use pip with Conda?</h3> <p>While Conda can install Python packages, pip is often necessary because:</p> <ul> <li>Many packages are only available on PyPI (Python Package Index)</li> <li>Some packages release newer versions on PyPI first</li> <li>Your project may have dependencies only available via pip</li> </ul> <h3 id="using-pip-in-a-conda-environment">Using pip in a Conda Environment</h3> <p><strong>Best Practice:</strong> Always activate your Conda environment before using pip!</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Activate your environment</span>
+conda activate research-env
+
+<span class="c"># Verify pip is from your conda environment</span>
+which pip  <span class="c"># Linux/Mac</span>
+where pip  <span class="c"># Windows</span>
+
+<span class="c"># Expected output should show path inside your conda environment</span>
+<span class="c"># e.g., ~/miniconda3/envs/research-env/bin/pip</span>
+</code></pre></div></div> <h3 id="installing-packages-with-pip">Installing Packages with pip</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install a single package</span>
+pip <span class="nb">install </span>requests
+
+<span class="c"># Install a specific version</span>
+pip <span class="nb">install </span><span class="nv">torch</span><span class="o">==</span>2.0.0
+
+<span class="c"># Install from requirements file</span>
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># Install in editable mode (for development)</span>
+pip <span class="nb">install</span> <span class="nt">-e</span> <span class="nb">.</span>
+</code></pre></div></div> <h3 id="creating-a-requirementstxt-file">Creating a requirements.txt File</h3> <p>A <code class="language-plaintext highlighter-rouge">requirements.txt</code> file lists all pip-installed packages:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate requirements.txt from current environment</span>
+pip freeze <span class="o">&gt;</span> requirements.txt
+
+<span class="c"># Install all packages from requirements.txt</span>
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div> <p><strong>Example <code class="language-plaintext highlighter-rouge">requirements.txt</code>:</strong></p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>numpy==1.24.3
+pandas==2.0.2
+scikit-learn==1.3.0
+matplotlib==3.7.1
+torch==2.0.0
+transformers==4.30.0
+</code></pre></div></div> <h3 id="managing-dependencies">Managing Dependencies</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List installed packages</span>
+pip list
+
+<span class="c"># Show details about a package</span>
+pip show numpy
+
+<span class="c"># Upgrade a package</span>
+pip <span class="nb">install</span> <span class="nt">--upgrade</span> numpy
+
+<span class="c"># Uninstall a package</span>
+pip uninstall numpy
+</code></pre></div></div> <h3 id="common-pip-issues-and-solutions">Common pip Issues and Solutions</h3> <h4 id="issue-pip-installs-to-wrong-location">Issue: pip installs to wrong location</h4> <p><strong>Solution:</strong> Make sure your conda environment is activated first!</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate research-env
+which pip  <span class="c"># Verify correct location</span>
+pip <span class="nb">install </span>package-name
+</code></pre></div></div> <h4 id="issue-permission-denied-errors">Issue: Permission denied errors</h4> <p><strong>Solution:</strong> Never use <code class="language-plaintext highlighter-rouge">sudo pip</code>! Use conda environments or virtual environments instead.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Wrong: sudo pip install package-name</span>
+<span class="c"># Right: activate environment first</span>
+conda activate research-env
+pip <span class="nb">install </span>package-name
+</code></pre></div></div> <h4 id="issue-conflicting-dependencies">Issue: Conflicting dependencies</h4> <p><strong>Solution:</strong> Create a fresh environment:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> fresh-env <span class="nv">python</span><span class="o">=</span>3.10
+conda activate fresh-env
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div> <hr> <h2 id="part-3-managing-dependencies-with-uv">Part 3: Managing Dependencies with uv</h2> <p><a href="https://github.com/astral-sh/uv" rel="external nofollow noopener" target="_blank">uv</a> is a modern, extremely fast Python package installer and resolver, written in Rust. It’s designed to be a drop-in replacement for pip but with significant performance improvements.</p> <h3 id="why-consider-uv">Why Consider uv?</h3> <ul> <li> <strong>Speed:</strong> Faster than pip</li> <li> <strong>Reliable:</strong> Better dependency resolution</li> <li> <strong>Compatible:</strong> Works as a drop-in replacement for pip</li> <li> <strong>Modern:</strong> Built with Rust for performance and reliability</li> </ul> <h3 id="installing-uv">Installing uv</h3> <h4 id="on-windows-1">On Windows</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using pip in your conda environment</span>
+conda activate research-env
+pip <span class="nb">install </span>uv
+
+<span class="c"># Or using the standalone installer</span>
+powershell <span class="nt">-c</span> <span class="s2">"irm https://astral.sh/uv/install.ps1 | iex"</span>
+</code></pre></div></div> <h4 id="on-linux">On Linux</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using pip in your conda environment</span>
+conda activate research-env
+pip <span class="nb">install </span>uv
+
+<span class="c"># Or using curl</span>
+curl <span class="nt">-LsSf</span> https://astral.sh/uv/install.sh | sh
+</code></pre></div></div> <p>Verify installation:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uv <span class="nt">--version</span>
+</code></pre></div></div> <h3 id="using-uv-in-your-workflow">Using uv in Your Workflow</h3> <p>uv commands mirror pip commands, making it easy to switch:</p> <h4 id="installing-packages">Installing Packages</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Activate your conda environment first!</span>
+conda activate research-env
+
+<span class="c"># Install a package (replaces: pip install numpy)</span>
+uv pip <span class="nb">install </span>numpy
+
+<span class="c"># Install multiple packages</span>
+uv pip <span class="nb">install </span>numpy pandas scikit-learn
+
+<span class="c"># Install from requirements.txt</span>
+uv pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># Install specific version</span>
+uv pip <span class="nb">install</span> <span class="s2">"torch==2.0.0"</span>
+</code></pre></div></div> <h4 id="creating-requirements-files">Creating Requirements Files</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate requirements (replaces: pip freeze)</span>
+uv pip freeze <span class="o">&gt;</span> requirements.txt
+
+<span class="c"># Show package information</span>
+uv pip show numpy
+
+<span class="c"># List installed packages</span>
+uv pip list
+</code></pre></div></div> <h4 id="upgrading-and-uninstalling">Upgrading and Uninstalling</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Upgrade a package</span>
+uv pip <span class="nb">install</span> <span class="nt">--upgrade</span> numpy
+
+<span class="c"># Uninstall a package</span>
+uv pip uninstall numpy
+</code></pre></div></div> <h3 id="uv-vs-pip-when-to-use-each">uv vs pip: When to Use Each?</h3> <table> <thead> <tr> <th>Use Case</th> <th>Recommendation</th> </tr> </thead> <tbody> <tr> <td>Small projects, quick installs</td> <td>Either pip or uv</td> </tr> <tr> <td>Large projects with many dependencies</td> <td>uv (faster)</td> </tr> <tr> <td>CI/CD pipelines</td> <td>uv (much faster)</td> </tr> <tr> <td>Installing compiled packages (numpy, scipy)</td> <td>pip or conda (more tested)</td> </tr> <tr> <td>Maximum compatibility</td> <td>pip</td> </tr> <tr> <td>Maximum speed</td> <td>uv</td> </tr> </tbody> </table> <h3 id="example-workflow-with-uv">Example Workflow with uv</h3> <p>Let’s set up a deep learning project using Conda + uv:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Create conda environment with system dependencies</span>
+conda create <span class="nt">-n</span> ml-project <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+conda activate ml-project
+
+<span class="c"># 2. Install heavy scientific packages with conda</span>
+conda <span class="nb">install</span> <span class="nt">-y</span> numpy scipy matplotlib jupyter
+
+<span class="c"># 3. Install uv</span>
+pip <span class="nb">install </span>uv
+
+<span class="c"># 4. Use uv for pure Python packages</span>
+uv pip <span class="nb">install </span>transformers datasets wandb
+uv pip <span class="nb">install </span>torch torchvision
+
+<span class="c"># 5. Generate requirements</span>
+uv pip freeze <span class="o">&gt;</span> requirements.txt
+</code></pre></div></div> <h3 id="creating-a-hybrid-environmentyml">Creating a Hybrid environment.yml</h3> <p>Combine the best of both worlds:</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">ml-project</span>
+<span class="na">channels</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">defaults</span>
+  <span class="pi">-</span> <span class="s">conda-forge</span>
+<span class="na">dependencies</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">python=3.10</span>
+  <span class="pi">-</span> <span class="s">numpy</span>
+  <span class="pi">-</span> <span class="s">scipy</span>
+  <span class="pi">-</span> <span class="s">matplotlib</span>
+  <span class="pi">-</span> <span class="s">jupyter</span>
+  <span class="pi">-</span> <span class="s">pip</span>
+  <span class="pi">-</span> <span class="na">pip</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">uv</span>  <span class="c1"># Install uv via pip</span>
+<span class="c1"># Then use uv for remaining packages:</span>
+<span class="c1"># uv pip install -r requirements.txt</span>
+</code></pre></div></div> <hr> <h2 id="practical-example-setting-up-for-lab-projects">Practical Example: Setting Up for Lab Projects</h2> <p>Let’s walk through setting up an environment for a typical research project in our lab.</p> <h3 id="scenario-machine-learning-for-vulnerability-detection">Scenario: Machine Learning for Vulnerability Detection</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Create conda environment</span>
+conda create <span class="nt">-n</span> vulndetect <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+conda activate vulndetect
+
+<span class="c"># 2. Install scientific computing stack via conda</span>
+conda <span class="nb">install</span> <span class="nt">-y</span> numpy pandas scikit-learn matplotlib jupyter
+
+<span class="c"># 3. Install uv for faster package management</span>
+pip <span class="nb">install </span>uv
+
+<span class="c"># 4. Clone your research repository</span>
+git clone git@github.com:cunymasslab/your-project.git
+<span class="nb">cd </span>your-project
+
+<span class="c"># 5. Install project dependencies with uv</span>
+uv pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># 6. Install your package in development mode</span>
+uv pip <span class="nb">install</span> <span class="nt">-e</span> <span class="nb">.</span>
+
+<span class="c"># 7. Verify installation</span>
+python <span class="nt">-c</span> <span class="s2">"import numpy, pandas, sklearn; print('Ready for research! ✅')"</span>
+
+<span class="c"># 8. Start Jupyter</span>
+jupyter notebook
+</code></pre></div></div> <h3 id="working-on-the-cluster">Working on the Cluster</h3> <p>For long-running experiments on the cluster:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SSH to cluster</span>
+ssh cluster_node
+
+<span class="c"># Set up conda (first time only)</span>
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+<span class="nb">source</span> ~/.bashrc
+
+<span class="c"># Create environment</span>
+conda create <span class="nt">-n</span> vulndetect <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+conda activate vulndetect
+
+<span class="c"># Install packages</span>
+conda <span class="nb">install</span> <span class="nt">-y</span> numpy pandas scikit-learn matplotlib
+pip <span class="nb">install </span>uv
+<span class="nb">cd </span>your-project
+uv pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># Use screen for long-running jobs</span>
+screen <span class="nt">-S</span> experiment1
+<span class="c"># Your command here</span>
+<span class="c"># Detach with Ctrl+A, Ctrl+D</span>
+</code></pre></div></div> <hr> <h2 id="best-practices-summary">Best Practices Summary</h2> <h3 id="dos-">Do’s ✅</h3> <ol> <li> <strong>Always use virtual environments</strong> - Never install packages globally</li> <li> <strong>Activate environment before installing</strong> - Avoid pip/uv installing to wrong location</li> <li> <strong>Keep requirements files updated</strong> - Document your dependencies</li> <li> <strong>Use conda for system libraries</strong> - NumPy, SciPy, CUDA, etc.</li> <li> <strong>Use pip/uv for pure Python packages</strong> - Transformers, requests, etc.</li> <li> <strong>Pin versions for reproducibility</strong> - Specify exact versions in production</li> <li> <strong>Export environments</strong> - Share <code class="language-plaintext highlighter-rouge">environment.yml</code> with collaborators</li> </ol> <h3 id="donts-">Don’ts ❌</h3> <ol> <li> <strong>Don’t use <code class="language-plaintext highlighter-rouge">sudo pip install</code></strong> - This breaks system Python</li> <li> <strong>Don’t mix conda and pip carelessly</strong> - Install pip packages after conda packages</li> <li> <strong>Don’t ignore dependency conflicts</strong> - They’ll cause runtime errors</li> <li> <strong>Don’t commit virtual environments</strong> - Use <code class="language-plaintext highlighter-rouge">.gitignore</code> for <code class="language-plaintext highlighter-rouge">venv/</code>, <code class="language-plaintext highlighter-rouge">.conda/</code> </li> <li> <strong>Don’t skip testing</strong> - Verify imports work after setup</li> </ol> <hr> <h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2> <h3 id="issue-conda-command-not-found">Issue: “conda: command not found”</h3> <p><strong>Solution:</strong></p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Reload shell configuration</span>
+<span class="nb">source</span> ~/.bashrc  <span class="c"># Linux</span>
+<span class="c"># or restart terminal on Windows</span>
+</code></pre></div></div> <h3 id="issue-packages-installing-to-system-python">Issue: Packages installing to system Python</h3> <p><strong>Solution:</strong></p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate your-env-name
+which python  <span class="c"># Verify correct Python</span>
+which pip     <span class="c"># Verify correct pip</span>
+</code></pre></div></div> <h3 id="issue-dependency-conflicts">Issue: Dependency conflicts</h3> <p><strong>Solution:</strong></p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create fresh environment</span>
+conda create <span class="nt">-n</span> fresh-env <span class="nv">python</span><span class="o">=</span>3.10
+conda activate fresh-env
+<span class="c"># Install packages one by one, starting with largest frameworks</span>
+</code></pre></div></div> <h3 id="issue-slow-pip-installs">Issue: Slow pip installs</h3> <p><strong>Solution:</strong></p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Switch to uv!</span>
+pip <span class="nb">install </span>uv
+uv pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div> <hr> <h2 id="additional-resources">Additional Resources</h2> <ul> <li><a href="https://docs.conda.io/" rel="external nofollow noopener" target="_blank">Conda Documentation</a></li> <li><a href="https://pip.pypa.io/" rel="external nofollow noopener" target="_blank">pip Documentation</a></li> <li><a href="https://github.com/astral-sh/uv" rel="external nofollow noopener" target="_blank">uv GitHub Repository</a></li> <li><a href="https://packaging.python.org/" rel="external nofollow noopener" target="_blank">Python Packaging Guide</a></li> </ul> <hr> <h2 id="getting-help">Getting Help</h2> <p>If you encounter issues:</p> <ol> <li>Check this guide’s troubleshooting section</li> <li>Search error messages online (Stack Overflow, GitHub Issues)</li> <li>Ask in our lab Slack/Discord channel</li> <li>Reach out to senior lab members</li> <li>File an issue in the lab’s GitHub repository</li> </ol> <p>Happy coding! 🐍✨</p> <hr> <p><strong>Maintained by:</strong> CUNY MASS Lab<br> <strong>Last Updated:</strong> December 8, 2025<br> <strong>Questions?</strong> Contact the lab administrators or the authors of this post.</p> </div> </article> <div id="giscus_thread" style="max-width: 930px; margin: 0 auto;"> <script>
+      let giscusTheme = determineComputedTheme();
+      let giscusAttributes = {
+        src: 'https://giscus.app/client.js',
+        'data-repo': 'cunymasslab/cunymasslab.github.io',
+        'data-repo-id': '',
+        'data-category': 'Comments',
+        'data-category-id': '',
+        'data-mapping': 'title',
+        'data-strict': '1',
+        'data-reactions-enabled': '1',
+        'data-emit-metadata': '0',
+        'data-input-position': 'bottom',
+        'data-theme': giscusTheme,
+        'data-lang': 'en',
+        crossorigin: 'anonymous',
+        async: '',
+      };
+
+      let giscusScript = document.createElement('script');
+      Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+      document.getElementById('giscus_thread').appendChild(giscusScript);
+    </script> <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a> </noscript> </div> </div> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 CUNY MASS Lab. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="/assets/js/bootstrap-toc.min.js?c82ff4de8b0955d6ff14f5b05eed7eb6"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
