@@ -177,7 +177,6 @@ kramdown:
 include: ["_pages", "_scripts", "_posts"]
 exclude:
   - _pages/cv.md
-    #  - _pages/blog.md
   - _pages/dropdown.md
   - _pages/repositories.md
   - bin/
