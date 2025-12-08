@@ -6,7 +6,7 @@ description: A comprehensive guide for newcomers to set up Python environments u
 tags: python conda pip uv tutorial environment
 categories: tutorials
 author: Vitaliy Tei and Josemar Ochoa
-giscus_comments: true
+giscus_comments: false
 related_posts: false
 toc:
   sidebar: left
@@ -166,7 +166,7 @@ dependencies:
   - jupyter
   - pip
   - pip:
-    - some-pip-only-package
+      - some-pip-only-package
 ```
 
 ---
@@ -378,14 +378,14 @@ uv pip uninstall numpy
 
 ### uv vs pip: When to Use Each?
 
-| Use Case | Recommendation |
-|----------|----------------|
-| Small projects, quick installs | Either pip or uv |
-| Large projects with many dependencies | uv (faster) |
-| CI/CD pipelines | uv (much faster) |
+| Use Case                                    | Recommendation             |
+| ------------------------------------------- | -------------------------- |
+| Small projects, quick installs              | Either pip or uv           |
+| Large projects with many dependencies       | uv (faster)                |
+| CI/CD pipelines                             | uv (much faster)           |
 | Installing compiled packages (numpy, scipy) | pip or conda (more tested) |
-| Maximum compatibility | pip |
-| Maximum speed | uv |
+| Maximum compatibility                       | pip                        |
+| Maximum speed                               | uv                         |
 
 ### Example Workflow with uv
 
@@ -427,7 +427,7 @@ dependencies:
   - jupyter
   - pip
   - pip:
-    - uv  # Install uv via pip
+      - uv # Install uv via pip
 # Then use uv for remaining packages:
 # uv pip install -r requirements.txt
 ```
@@ -526,6 +526,7 @@ screen -S experiment1
 ### Issue: "conda: command not found"
 
 **Solution:**
+
 ```bash
 # Reload shell configuration
 source ~/.bashrc  # Linux
@@ -535,6 +536,7 @@ source ~/.bashrc  # Linux
 ### Issue: Packages installing to system Python
 
 **Solution:**
+
 ```bash
 conda activate your-env-name
 which python  # Verify correct Python
@@ -544,6 +546,7 @@ which pip     # Verify correct pip
 ### Issue: Dependency conflicts
 
 **Solution:**
+
 ```bash
 # Create fresh environment
 conda create -n fresh-env python=3.10
@@ -554,6 +557,7 @@ conda activate fresh-env
 ### Issue: Slow pip installs
 
 **Solution:**
+
 ```bash
 # Switch to uv!
 pip install uv

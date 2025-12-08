@@ -6,7 +6,7 @@ description: A comprehensive guide to debugging Python code remotely on computin
 tags: debugging vscode python remote-development cluster tutorial
 categories: tutorials
 author: Josemar Ochoa and Vitaliy Tei
-giscus_comments: true
+giscus_comments: false
 related_posts: false
 toc:
   sidebar: left
@@ -64,6 +64,7 @@ screen -S setup_env
 ```
 
 **Screen Commands:**
+
 - Detach: `Ctrl+A`, then `D`
 - Reattach: `screen -r setup_env`
 - List sessions: `screen -ls`
@@ -99,6 +100,7 @@ python -m debugpy --wait-for-client --listen 0.0.0.0:5678 your_script.py
 ```
 
 Let's break down the parameters:
+
 - `0.0.0.0` - Listens on all network interfaces (allows external connections)
 - `5678` - The port for the debug server (use another if this is occupied)
 - `--wait-for-client` - Pauses code execution until VS Code attaches
@@ -162,33 +164,33 @@ In your project's root directory, create `.vscode/launch.json` with the followin
 
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Remote Attach without Mappings",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 55678
+      }
+    },
+    {
+      "name": "Python Debugger: Remote Attach",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 55678
+      },
+      "pathMappings": [
         {
-            "name": "Python Debugger: Remote Attach without Mappings",
-            "type": "debugpy",
-            "request": "attach",
-            "connect": {
-                "host": "localhost",
-                "port": 55678
-            }
-        },
-        {
-            "name": "Python Debugger: Remote Attach",
-            "type": "debugpy",
-            "request": "attach",
-            "connect": {
-                "host": "localhost",
-                "port": 55678
-            },
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "/home/vulnewdata"
-                }
-            ]
+          "localRoot": "${workspaceFolder}",
+          "remoteRoot": "/home/vulnewdata"
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
@@ -200,6 +202,7 @@ We have two debug configurations:
 2. **With Mappings:** Use this when your local workspace is in a different location than the remote one
 
 **Path Mappings Explained:**
+
 - `localRoot`: Your local project directory (`${workspaceFolder}` refers to your VS Code workspace)
 - `remoteRoot`: The absolute path to the project on the remote cluster
 
@@ -265,6 +268,7 @@ ssh -L 55678:localhost:5678 cluster_node
 ```
 
 **Understanding the Command:**
+
 - `-L 55678:localhost:5678` - Forward local port `55678` to remote port `5678`
 - `cluster_node` - Your SSH alias or `user@hostname`
 
@@ -338,6 +342,7 @@ Now that everything is set up, let's start debugging.
 6. Click the green play button ▶ or press `F5`
 
 **Success!** VS Code should connect, and you'll see:
+
 - Your breakpoint indicators turn red (active)
 - The debug toolbar appears
 - Variables panel populates
@@ -348,21 +353,25 @@ Now that everything is set up, let's start debugging.
 Once connected, you can:
 
 **Navigate Through Code:**
+
 - **Continue** (`F5`): Resume execution until next breakpoint
 - **Step Over** (`F10`): Execute current line, don't enter functions
 - **Step Into** (`F11`): Enter function calls to debug them
 - **Step Out** (`Shift+F11`): Exit current function
 
 **Inspect Variables:**
+
 - View local and global variables in the Variables panel
 - Hover over variables in the code to see their values
 - Add variables to the Watch panel for continuous monitoring
 
 **Evaluate Expressions:**
+
 - Use the Debug Console to evaluate Python expressions in real-time
 - Type any valid Python code to test hypotheses
 
 **Call Stack:**
+
 - See the execution path that led to the current point
 - Click on different frames to inspect variables at each level
 
@@ -396,6 +405,7 @@ python -m debugpy --wait-for-client --listen 0.0.0.0:5678 \
    - Validation step
 
 3. **Start SSH tunnel** (separate terminal):
+
    ```bash
    ssh -L 55678:localhost:5678 cluster_node
    ```
@@ -420,6 +430,7 @@ loss = criterion(outputs, labels)
 ```
 
 In Debug Console, inspect:
+
 ```python
 >>> outputs
 tensor([...])  # Check for NaN or inf values
@@ -438,6 +449,7 @@ y = classifier(x)  # Dimension mismatch here
 ```
 
 Check in Variables panel or Debug Console:
+
 ```python
 >>> x.shape
 torch.Size([32, 512])
@@ -452,17 +464,20 @@ torch.Size([32, 512])
 ### Issue 1: VS Code Can't Connect to Debug Server
 
 **Symptoms:**
+
 - "Connection refused" or timeout error
 - Debugger doesn't attach
 
 **Solutions:**
 
 1. **Verify DebugPy is running on cluster:**
+
    ```bash
    netstat -a -n | grep 5678
    ```
 
 2. **Check SSH tunnel is active:**
+
    ```bash
    # Local machine
    netstat -a -n | grep 55678
@@ -478,12 +493,14 @@ torch.Size([32, 512])
 ### Issue 2: Breakpoints Are Gray (Not Active)
 
 **Symptoms:**
+
 - Breakpoints appear gray/hollow
 - Code doesn't pause at breakpoints
 
 **Solutions:**
 
 1. **Check path mappings in `launch.json`:**
+
    ```json
    "pathMappings": [
        {
@@ -494,6 +511,7 @@ torch.Size([32, 512])
    ```
 
 2. **Verify files are in sync:**
+
    ```bash
    git status  # On both local and remote
    ```
@@ -503,12 +521,14 @@ torch.Size([32, 512])
 ### Issue 3: SSH Connection Drops
 
 **Symptoms:**
+
 - Debugging suddenly stops
 - "Connection lost" message
 
 **Solutions:**
 
 1. **Use screen on the cluster:**
+
    ```bash
    screen -S debug_session
    python -m debugpy --wait-for-client --listen 0.0.0.0:5678 script.py
@@ -516,6 +536,7 @@ torch.Size([32, 512])
    ```
 
 2. **Configure SSH keepalive** in `~/.ssh/config`:
+
    ```
    Host cluster_node
        ServerAliveInterval 60
@@ -531,46 +552,52 @@ torch.Size([32, 512])
 ### Issue 4: Port Already in Use
 
 **Symptoms:**
+
 - "Address already in use" error
 
 **Solutions:**
 
 1. **Find and kill the process:**
+
    ```bash
    # On cluster
    lsof -ti:5678 | xargs kill -9
-   
+
    # On local machine
    lsof -ti:55678 | xargs kill -9  # Mac/Linux
    netstat -ano | findstr :55678   # Windows (then use taskkill)
    ```
 
 2. **Use different ports:**
+
    ```bash
    # On cluster
    python -m debugpy --wait-for-client --listen 0.0.0.0:5679 script.py
-   
+
    # On local machine
    ssh -L 55679:localhost:5679 cluster_node
-   
+
    # Update launch.json port to 55679
    ```
 
 ### Issue 5: Wrong Python Interpreter
 
 **Symptoms:**
+
 - Import errors for packages you know are installed
 - Different Python version than expected
 
 **Solutions:**
 
 1. **Verify remote Python:**
+
    ```bash
    which python
    python --version
    ```
 
 2. **Explicitly use conda python:**
+
    ```bash
    conda activate vulnewdata
    which python  # Should show conda env path
@@ -646,7 +673,7 @@ Debug multiple processes simultaneously:
 # Terminal 1: Debug main training
 ssh -L 55678:localhost:5678 cluster_node
 
-# Terminal 2: Debug data preprocessing  
+# Terminal 2: Debug data preprocessing
 ssh -L 55679:localhost:5679 cluster_node
 ```
 
@@ -670,6 +697,7 @@ Then connect with both Jupyter port forwarding and debug port forwarding!
 ### Essential Commands
 
 **Remote Cluster:**
+
 ```bash
 # Start debug server
 python -m debugpy --wait-for-client --listen 0.0.0.0:5678 script.py
@@ -682,6 +710,7 @@ pkill -f debugpy
 ```
 
 **Local Machine:**
+
 ```bash
 # SSH tunnel
 ssh -L 55678:localhost:5678 cluster_node
@@ -694,6 +723,7 @@ ssh -N -L 55678:localhost:5678 cluster_node
 ```
 
 **VS Code:**
+
 - Open Debug panel: `Ctrl+Shift+D`
 - Start debugging: `F5`
 - Toggle breakpoint: `F9`
