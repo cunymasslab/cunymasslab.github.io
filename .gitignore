@@ -1,6 +1,7 @@
 # project specific
 .bundle
 .local
+.vendor
 # inherited from al-folio
 _site
 .sass-cache

@@ -39,23 +39,24 @@ profiles:
     image: people/dummy_man_small.png
     desc: >
       Jack is a Master student of Computer Science at CUNY Brooklyn College.
-  - name: John Doros
-    type: undergraduate
-    image: people/dummy_man_small.png
-    desc: >
-      John is an undergraduate student of Computer Science at CUNY Brooklyn College.
-
-  - name: David Lam
-    type: undergraduate
-    image: people/dummy_man_small.png
-    desc: >
-      David is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
   - name: Mansoor Abid
     type: undergraduate
     image: people/dummy_man_small.png
     desc: >
       Mansoor is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Sagor Sutra Dhor
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Sagor is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: John Doros
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      John is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
   - name: Faizan Khan
     type: undergraduate
@@ -67,11 +68,31 @@ profiles:
     desc: >
       Faizan is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
-  - name: Sagor Sutra Dhor
+  - name: David Lam
     type: undergraduate
     image: people/dummy_man_small.png
     desc: >
-      Sagor is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      David is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Josemar Ochoa
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Josemar is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      <br><br>
+      Selected blog posts:
+      <a href="/blog/2025/python-environment-setup/">Python Environment Setup</a>,
+      <a href="/blog/2025/remote-debugging-vscode/">Remote Debugging with VS Code</a>.
+
+  - name: Vitaliy Tei
+    type: undergraduate
+    image: people/dummy_man_small.png
+    desc: >
+      Vitaliy is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      <br><br>
+      Selected blog posts:
+      <a href="/blog/2025/python-environment-setup/">Python Environment Setup</a>,
+      <a href="/blog/2025/remote-debugging-vscode/">Remote Debugging with VS Code</a>.
 
   - name: Shawn Duncan
     type: alumni
