@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 description: Selected Publications
 nav: true
-nav_order: 2
+nav_order: 3
 earlier_papers: true
 earlier_all: notcuny_chenhui_cs_jrnl_plus_conf.bib
 ---
