@@ -1,8 +1,6 @@
 ---
 layout: about
 title: about
-nav: true
-nav_order: 1
 permalink: /
 subtitle: Advancing knowledge for building secure, efficient, and usable applications, systems, and networks
 
