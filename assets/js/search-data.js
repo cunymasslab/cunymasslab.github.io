@@ -37,7 +37,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "projects-accountable-and-secure-systems",
+        },{id: "post-remote-debugging-on-cluster-with-vs-code-and-debugpy",
+        
+          title: "Remote Debugging on Cluster with VS Code and DebugPy",
+        
+        description: "A comprehensive guide to debugging Python code remotely on computing clusters using VS Code, DebugPy, and SSH port forwarding",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/remote-debugging-vscode/";
+          
+        },
+      },{id: "post-setting-up-python-development-environment-for-lab-research",
+        
+          title: "Setting Up Python Development Environment for Lab Research",
+        
+        description: "A comprehensive guide for newcomers to set up Python environments using Conda, pip, and uv for reproducible research",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/python-environment-setup/";
+          
+        },
+      },{id: "projects-accountable-and-secure-systems",
           title: 'Accountable and Secure Systems',
           description: "",
           section: "Projects",handler: () => {
