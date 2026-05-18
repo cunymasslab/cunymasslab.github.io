@@ -23,6 +23,7 @@ exclude = [
 #  "_pages/404.md",
 #  "_pages/blog.md",
   '\{\{.*\}\}',   # ignore Liquid expressions
+  '%7B%7B.*%7D%7D',    # URL-encoded liquid
   "https://doi.org/.*",
   "https://docs.conda.io/.*"
 ]
