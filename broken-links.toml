@@ -1,0 +1,24 @@
+# lychee.toml
+
+# Be verbose but CI-friendly
+verbose = "true"
+no_progress = "true"
+
+# Retry behavior
+max_retries = 3
+retry_wait_time = 2
+
+# Redirect handling
+max_redirects = 10
+
+# Pretend to be a browser (helps avoid 403 / 418)
+user_agent = "Mozilla/5.0 (X11; Linux x86_64)"
+
+# Accept some "false negative" status codes
+accept = [200, 403, 429]
+
+# Exclude problematic domains
+exclude = [
+  "https://doi.org/.*",
+  "https://docs.conda.io/.*"
+]
