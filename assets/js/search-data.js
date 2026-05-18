@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-remote-debugging-on-cluster-with-vs-code-and-debugpy",
+        },{id: "post-distributed-machine-learning-training-and-infererence-using-ray",
+        
+          title: "Distributed Machine Learning Training and Infererence using Ray",
+        
+        description: "An introduction to set up distributed training and inference using Ray.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ray-distributed/";
+          
+        },
+      },{id: "post-remote-debugging-on-cluster-with-vs-code-and-debugpy",
         
           title: "Remote Debugging on Cluster with VS Code and DebugPy",
         
