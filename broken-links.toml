@@ -1,8 +1,8 @@
 # lychee.toml
 
 # Be verbose but CI-friendly
-verbose = "true"
-no_progress = "true"
+verbose = "info"
+no_progress = true
 
 # Retry behavior
 max_retries = 3
