@@ -46,6 +46,14 @@ profiles:
     desc: >
       Sagor is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
+  - name: Blinda Hu
+    type: undergraduate
+    contribution: Sofware Vulnerability Prediction
+    class: CISC 5001 Spring 2026
+    image: people/dummy_woman_small.png
+    desc: >
+      Blinda is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
   - name: Faizan Khan
     type: undergraduate
     image: people/dummy_man_small.png
@@ -56,18 +64,21 @@ profiles:
     desc: >
       Faizan is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
-  - name: Josemar Ochoa
-    type: alumni
-    before: undergraduate
+  - name: Jiahao Pan
+    type: undergraduate
+    contribution: Sofware Vulnerability Prediction
+    class: CISC 5001 Spring 2026
     image: people/dummy_man_small.png
-    class: [CISC 5001 Fall 2025, CISC 5002, Spring 2026]
     desc: >
-      Josemar is an undergraduate student of Computer Science at CUNY Brooklyn College.
-      <br><br>
-      Selected blog posts:
-      <a href="/blog/2025/python-environment-setup/">Python Environment Setup</a>,
-      <a href="/blog/2025/remote-debugging-vscode/">Remote Debugging with VS Code</a>,
-      <a href="/blog/2026/ray-distributed/">Distributed Machine Learning using Ray</a>.
+      Jiahao is an undergraduate student of Computer Science at CUNY Brooklyn College.
+
+  - name: Martina Garcia Vasquez
+    type: undergraduate
+    contribution: Sofware Vulnerability Prediction
+    class: CISC 5001 Spring 2026
+    image: people/dummy_woman_small.png
+    desc: >
+      Martina is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
   - name: Shawn Duncan
     type: alumni
@@ -144,7 +155,7 @@ profiles:
     before: undergraduate
     contribution: AI use in SE exploration study
     class: CISC 4900 Fall 2025
-    image: people/dummy_man_small.png
+    image: people/dummy_woman_small.png
     desc: >
       Sammi was an undergraduate student of Computer Science at CUNY Brooklyn College.
 
@@ -157,6 +168,19 @@ profiles:
     desc: >
       Wesley was a Computer Science undergraduate student at CUNY Brooklyn College. He graduated
       with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Josemar Ochoa
+    type: alumni
+    before: undergraduate
+    image: people/dummy_man_small.png
+    class: [CISC 5001 Fall 2025, CISC 5002, Spring 2026]
+    desc: >
+      Josemar is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      <br><br>
+      Selected blog posts:
+      <a href="/blog/2025/python-environment-setup/">Python Environment Setup</a>,
+      <a href="/blog/2025/remote-debugging-vscode/">Remote Debugging with VS Code</a>,
+      <a href="/blog/2026/ray-distributed/">Distributed Machine Learning using Ray</a>.
 
   - name: Vitaliy Tei
     type: alumni
