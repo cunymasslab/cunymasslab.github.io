@@ -5,3 +5,10 @@
 *.scss text eol=lf
 *.js text eol=lf
 *.md text eol=lf
+*.txt text eol=lf
+*.rb text eol=lf
+*.toml text eol=lf
+*.bib text eol=lf
+.prettierignore text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
