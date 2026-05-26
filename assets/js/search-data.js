@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-distributed-machine-learning-training-and-infererence-using-ray",
+        },{id: "post-running-ollama-without-root-previledge-sudo-on-a-remote-linux-gpu-cluster",
+        
+          title: "Running Ollama Without Root Previledge (sudo) on a Remote Linux GPU Cluster",
+        
+        description: "An introduction to set up Ollama without root previlege on Linux systems",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ollama_cluster_tutorial_README/";
+          
+        },
+      },{id: "post-distributed-machine-learning-training-and-infererence-using-ray",
         
           title: "Distributed Machine Learning Training and Infererence using Ray",
         
