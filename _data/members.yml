@@ -43,20 +43,14 @@ profiles:
   - name: Sagor Sutra Dhor
     type: undergraduate
     image: people/dummy_man_small.png
+    contribution: Software Security/Robust Programming
     desc: >
       Sagor is an undergraduate student of Computer Science at CUNY Brooklyn College.
-
-  - name: Blinda Hu
-    type: undergraduate
-    contribution: Sofware Vulnerability Prediction
-    class: CISC 5001 Spring 2026
-    image: people/dummy_woman_small.png
-    desc: >
-      Blinda is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
   - name: Faizan Khan
     type: undergraduate
     image: people/dummy_man_small.png
+    contribution: Software Security/Robust Programming
     linkedin: https://www.linkedin.com/in/faizan-khan234
     linkedin_username: faizan-khan234
     github: https://github.com/jellyfishing2346
@@ -64,13 +58,12 @@ profiles:
     desc: >
       Faizan is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
-  - name: Jiahao Pan
-    type: undergraduate
-    contribution: Sofware Vulnerability Prediction
-    class: CISC 5001 Spring 2026
+  - name: Eliyahu Mizrahi
+    type: undergraduate student
     image: people/dummy_man_small.png
+    contribution: Network-based Internet Censorship Detection
     desc: >
-      Jiahao is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      Eliyahu is an undergraduate student of Computer Science at CUNY Brooklyn College.
 
   - name: Martina Garcia Vasquez
     type: undergraduate
@@ -95,6 +88,26 @@ profiles:
     desc: >
       Ariel was a Master student of Computer Science at CUNY Brooklyn College. He graduated
       with a M.A. in Computer Science from Brooklyn College.
+
+  - name: Blinda Hu
+    type: alumni
+    before: undergraduate
+    contribution: Sofware Vulnerability Prediction
+    class: CISC 5001 Spring 2026
+    image: people/dummy_woman_small.png
+    desc: >
+      Blinda was an undergraduate student of Computer Science at CUNY Brooklyn College. She
+      graduated with a B.S. in Computer Science from Brooklyn College.
+
+  - name: Jiahao Pan
+    type: alumni
+    before: undergraduate
+    contribution: Sofware Vulnerability Prediction
+    class: CISC 5001 Spring 2026
+    image: people/dummy_man_small.png
+    desc: >
+      Jiahao as an undergraduate student of Computer Science at CUNY Brooklyn College. He
+      graduated with a B.S. in Computer Science from Brooklyn College.
 
   - name: Mansoor Abid
     type: alumni
