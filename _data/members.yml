@@ -3,7 +3,7 @@ profiles:
     type: faculty
     key: chenhui
     desc: >
-      Professor Hui Chen directs the Mass Lab. For more about this work, please visit his
+      Professor Hui Chen directs the Mass Lab. For more about his work, please visit his
       <a href="https://huichen-cs.github.io" target="_blank">personal website</a>.
     # image: people/HuiChenWebSm.png
     # image relative to /assets/img
@@ -61,9 +61,16 @@ profiles:
   - name: Eliyahu Mizrahi
     type: undergraduate student
     image: people/dummy_man_small.png
+    url: https://eliyahumizrahi.com/
     contribution: Network-based Internet Censorship Detection
+    linkedin: https://www.linkedin.com/in/eliyahu-mizrahi-a82672331
+    linkedin_username: eliyahu-mizrahi-a8267233
+    github: https://github.com/EliyahuMizrahi
+    github_username: EliyahuMizrahi
     desc: >
       Eliyahu is an undergraduate student of Computer Science at CUNY Brooklyn College.
+      For more about his work, please visit his
+      <a href="https://eliyahumizrahi.com/" target="_blank">personal website.</a>
 
   - name: Martina Garcia Vasquez
     type: undergraduate
