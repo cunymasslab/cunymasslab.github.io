@@ -38,6 +38,9 @@ layout: page
               {% if profile.linkedin_username %}
                 <a href="https://www.linkedin.com/in/{{ profile.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
               {% endif %}
+              {% if profile.url %}
+                <a href="{{ profile.url }}" title="Personal Website"><i class="fa-solid fa-globe"></i></a>
+              {% endif %}
             </div>
             {{ profile.name }}
           </div>
