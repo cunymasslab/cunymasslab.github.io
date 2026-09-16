@@ -21,6 +21,13 @@ profiles:
       Cheng Ning is a Ph.D. student of Compuer Science at CUNY Graduate Center.
     image: people/dummy_man_small.png
 
+  - name: Avinash Jairam
+    type: phd
+    desc: >
+      Avinash Jairam is a Ph.D. student of Computer Science at CUNY Graduate Center.
+      He is also a lecturer at Medgar Evers College.
+    image: people/dummy_man_small.png
+
   - name: Kevin J. Lewis
     type: phd
     image: people/dummy_man_small.png
